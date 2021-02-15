@@ -24,13 +24,13 @@ public class InfinityExpansion extends JavaPlugin implements SlimefunAddon {
     public void onEnable() {
         instance = this;
 
-        PluginUtils.setup(ChatColor.AQUA + "Infinity" + ChatColor.GRAY + "Expansion", this, "Mooy1/InfinityExpansion/master", getFile());
+        PluginUtils.setup(ChatColor.AQUA + "無限" + ChatColor.GRAY + "附加", this, "xMikux/InfinityExpansion/master", getFile());
         
         CommandManager.setup("infinityexpansion", "infinityexpansion.admin", "/ie, /ix, /infinity",
                 new GiveRecipe()
         );
-        
-        @SuppressWarnings("unused") 
+
+        @SuppressWarnings("unused")
         final Metrics metrics = new Metrics(this, 8991);
 
         difficulty = ConfigUtils.getDouble(getConfig(), "balance-options.difficulty", .1, 10, 1);
@@ -48,7 +48,7 @@ public class InfinityExpansion extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/Mooy1/InfinityExpansion/issues";
+        return "https://github.com/xMikux/InfinityExpansion/issues";
     }
 
     @Nonnull

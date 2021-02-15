@@ -141,8 +141,8 @@ public final class Quarry extends AbstractMachine implements RecipeDisplayItem {
     public static final SlimefunItemStack BASIC = new SlimefunItemStack(
             "BASIC_QUARRY",
             Material.CHISELED_SANDSTONE,
-            "&9Basic Quarry",
-            "&7Automatically mines vanilla overworld ores",
+            "&9基本採石場",
+            "&7自動開採原版主世界的礦物",
             "",
             LorePreset.speed(1),
             LorePreset.energyPerSecond(300)
@@ -150,8 +150,8 @@ public final class Quarry extends AbstractMachine implements RecipeDisplayItem {
     public static final SlimefunItemStack ADVANCED = new SlimefunItemStack(
             "ADVANCED_QUARRY",
             Material.CHISELED_RED_SANDSTONE,
-            "&cAdvanced Quarry",
-            "&7Smelts vanilla ores and can mine nether ores",
+            "&c高級採石場",
+            "&7熔煉原版的礦物, 可以開採地獄的礦物",
             "",
             LorePreset.speed(2),
             LorePreset.energyPerSecond(900)
@@ -159,8 +159,8 @@ public final class Quarry extends AbstractMachine implements RecipeDisplayItem {
     public static final SlimefunItemStack VOID = new SlimefunItemStack(
             "VOID_QUARRY",
             Material.CHISELED_NETHER_BRICKS,
-            "&8Void Quarry",
-            "&7Can mine sifted ores or 24 karat gold occasionally",
+            "&8虛空採石場",
+            "&7可以開採篩礦或偶爾開採到24克拉的金",
             "",
             LorePreset.speed(4),
             LorePreset.energyPerSecond(3600)
@@ -168,8 +168,8 @@ public final class Quarry extends AbstractMachine implements RecipeDisplayItem {
     public static final SlimefunItemStack INFINITY = new SlimefunItemStack(
             "INFINITY_QUARRY",
             Material.CHISELED_POLISHED_BLACKSTONE,
-            "&bInfinity Quarry",
-            "&7Can mine and smelt Slimefun ingots",
+            "&b無限採石場",
+            "&7可以開採並熔煉Slimefun的錠",
             "",
             LorePreset.speed(16),
             LorePreset.energyPerSecond(36000)
@@ -266,7 +266,7 @@ public final class Quarry extends AbstractMachine implements RecipeDisplayItem {
         return "&7Mines:";
     }
     
-    private static final ItemStack MINING = new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aMining...");
+    private static final ItemStack MINING = new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a挖掘中...");
     
     @Override
     protected boolean process(@Nonnull BlockMenu inv, @Nonnull Block b, @Nonnull Config data) {

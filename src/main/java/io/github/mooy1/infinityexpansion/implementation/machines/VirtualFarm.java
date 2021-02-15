@@ -65,8 +65,8 @@ public final class VirtualFarm extends AbstractMachine implements RecipeDisplayI
     public static final SlimefunItemStack BASIC = new SlimefunItemStack(
             "BASIC_VIRTUAL_FARM",
             Material.GRASS_BLOCK,
-            "&9Basic &aVirtual Farm",
-            "&7Automatically grows, harvests, and replants crops",
+            "&9基本&a虛擬農場",
+            "&7自動種植, 收割與重新種植農作物",
             "",
             LorePreset.speed(1),
             LorePreset.energyPerSecond(18)
@@ -74,8 +74,8 @@ public final class VirtualFarm extends AbstractMachine implements RecipeDisplayI
     public static final SlimefunItemStack ADVANCED = new SlimefunItemStack(
             "ADVANCED_VIRTUAL_FARM",
             Material.CRIMSON_NYLIUM,
-            "&cAdvanced &aVirtual Farm",
-            "&7Automatically grows, harvests, and replants crops",
+            "&c高級&a虛擬農場",
+            "&7自動種植, 收割與重新種植農作物",
             "",
             LorePreset.speed(5),
             LorePreset.energyPerSecond(90)
@@ -83,8 +83,8 @@ public final class VirtualFarm extends AbstractMachine implements RecipeDisplayI
     public static final SlimefunItemStack INFINITY = new SlimefunItemStack(
             "INFINITY_VIRTUAL_FARM",
             Material.WARPED_NYLIUM,
-            "&bInfinity &aVirtual Farm",
-            "&7Automatically grows, harvests, and replants crops",
+            "&b無限&a虛擬農場",
+            "&7自動種植, 收割與重新種植農作物",
             "",
             LorePreset.speed(25),
             LorePreset.energyPerSecond(900)
@@ -130,7 +130,7 @@ public final class VirtualFarm extends AbstractMachine implements RecipeDisplayI
             if (input == null) {
 
                 if (inv.hasViewer()) {
-                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9Input a seed"));
+                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9放入種子"));
                 }
 
             } else {
@@ -140,7 +140,7 @@ public final class VirtualFarm extends AbstractMachine implements RecipeDisplayI
                 if (inputType == null) {
 
                     if (inv.hasViewer()) {
-                        inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&cInput a seed!"));
+                        inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&c放入種子!"));
                     }
 
                     for (int slot : OUTPUT_SLOTS) {
@@ -158,7 +158,7 @@ public final class VirtualFarm extends AbstractMachine implements RecipeDisplayI
                     inv.consumeItem(INPUT_SLOTS[0], 1);
 
                     if (inv.hasViewer()) {
-                        inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aPlanting... (" + this.speed + "/" + TIME + ")"));
+                        inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a種植中... (" + this.speed + "/" + TIME + ")"));
                     }
 
                     return true;
@@ -174,7 +174,7 @@ public final class VirtualFarm extends AbstractMachine implements RecipeDisplayI
 
             if (inv.hasViewer()) {
                 inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE,
-                        "&aGrowing... (" + (progress + this.speed) + "/" + TIME + ")"));
+                        "&a成長中... (" + (progress + this.speed) + "/" + TIME + ")"));
             }
 
             return true;
@@ -198,7 +198,7 @@ public final class VirtualFarm extends AbstractMachine implements RecipeDisplayI
             if (inv.fits(output2, INPUT_SLOTS)) inv.pushItem(output2, INPUT_SLOTS);
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aHarvesting..."));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a收割中..."));
             }
 
             setProgress(b, 0);

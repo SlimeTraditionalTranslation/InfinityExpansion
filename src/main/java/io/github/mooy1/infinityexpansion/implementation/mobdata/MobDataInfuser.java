@@ -26,10 +26,10 @@ public final class MobDataInfuser extends AbstractCrafter implements EnergyNetCo
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "DATA_INFUSER",
             Material.LODESTONE,
-            "&8Mob Data Infuser",
-            "&7Infused empty data cards with mob items",
+            "&8怪物資料注入機",
+            "&7向空資料卡注入怪物的物品",
             "",
-            LorePreset.energy(MobDataInfuser.ENERGY) + "per use"
+            LorePreset.energy(MobDataInfuser.ENERGY) + "次使用"
     );
     private static final int ENERGY = 20000;
     public static final DelayedRecipeType TYPE = new DelayedRecipeType(ITEM);
@@ -50,7 +50,7 @@ public final class MobDataInfuser extends AbstractCrafter implements EnergyNetCo
     @Nonnull
     @Override
     public String preCraftMessage(@Nonnull Location l, @Nonnull BlockMenu inv) {
-        return ChatColor.RED + "Not enough energy!";
+        return ChatColor.RED + "能量不足!";
     }
 
     @Nullable

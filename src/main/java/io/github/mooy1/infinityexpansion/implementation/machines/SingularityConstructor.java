@@ -64,8 +64,8 @@ public final class SingularityConstructor extends AbstractMachine implements Rec
     public static final SlimefunItemStack BASIC = new SlimefunItemStack(
             "SINGULARITY_CONSTRUCTOR",
             Material.QUARTZ_BRICKS,
-            "&fSingularity Constructor",
-            "&7Condenses large amounts of resources",
+            "&f奇點構造機",
+            "&7凝聚大量的資源",
             "",
             LorePreset.speed(1),
             LorePreset.energyPerSecond(120)
@@ -73,8 +73,8 @@ public final class SingularityConstructor extends AbstractMachine implements Rec
     public static final SlimefunItemStack INFINITY = new SlimefunItemStack(
             "INFINITY_CONSTRUCTOR",
             Material.CHISELED_QUARTZ_BLOCK,
-            "&bInfinity &fConstructor",
-            "&7Quickly condenses large amounts of resources",
+            "&b無限&f構造機",
+            "&7更快的凝聚大量資源",
             "",
             LorePreset.speed(32),
             LorePreset.energyPerSecond(1200)
@@ -193,14 +193,14 @@ public final class SingularityConstructor extends AbstractMachine implements Rec
                 if (menu.hasViewer()) {
                     menu.replaceExistingItem(STATUS_SLOT, new CustomItem(
                             Material.LIME_STAINED_GLASS_PANE,
-                            "&aConstructing " + triplet.getA().getDisplayName() + "...",
-                            "&7Complete"
+                            "&a凝聚中 " + triplet.getA().getDisplayName() + "...",
+                            "&7完成"
                     ));
                 }
             } else if (menu.hasViewer()) {
                 menu.replaceExistingItem(STATUS_SLOT, new CustomItem(
                         Material.LIME_STAINED_GLASS_PANE,
-                        "&aConstructing " + triplet.getA().getDisplayName() + "...",
+                        "&a凝聚中 " + triplet.getA().getDisplayName() + "...",
                         "&7" + progress + " / " + triplet.getC()
                 ));
             }

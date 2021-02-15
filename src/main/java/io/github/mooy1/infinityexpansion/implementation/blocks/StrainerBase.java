@@ -42,7 +42,7 @@ public final class StrainerBase extends AbstractTicker implements RecipeDisplayI
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "STRAINER_BASE",
             Material.SANDSTONE_WALL,
-            "&7Strainer Base"
+            "&7過濾基座"
     );
     
     private static final int STATUS_SLOT = MenuPreset.slot1;
@@ -121,7 +121,7 @@ public final class StrainerBase extends AbstractTicker implements RecipeDisplayI
         
     }
     
-    private static final ItemStack POTATO = new CustomItem(Material.POTATO, "&7:&6Potatofish&7:", "&eLucky");
+    private static final ItemStack POTATO = new CustomItem(Material.POTATO, "&7:&6馬鈴薯魚&7:", "&e幸運");
 
     @Nonnull
     @Override
@@ -139,7 +139,7 @@ public final class StrainerBase extends AbstractTicker implements RecipeDisplayI
     @Nonnull
     @Override
     public String getRecipeSectionLabel(@Nonnull Player p) {
-        return "&7Collects:";
+        return "&7收集:";
     }
 
     @Override
@@ -158,7 +158,7 @@ public final class StrainerBase extends AbstractTicker implements RecipeDisplayI
         if (speed == 0) {
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&cInput a Strainer!"));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&c放入過濾器!"));
             }
 
             return;
@@ -169,7 +169,7 @@ public final class StrainerBase extends AbstractTicker implements RecipeDisplayI
         if (!RandomUtils.chanceIn(TIME / speed)) {
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aCollecting..."));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a收集中..."));
             }
 
             return;
@@ -199,7 +199,7 @@ public final class StrainerBase extends AbstractTicker implements RecipeDisplayI
         inv.pushItem(output, OUTPUT_SLOTS);
 
         if (inv.hasViewer()) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aMaterial Collected!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a已收集到材料!"));
         }
 
         //reduce durability

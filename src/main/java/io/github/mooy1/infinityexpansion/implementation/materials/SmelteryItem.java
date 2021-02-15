@@ -12,54 +12,54 @@ public final class SmelteryItem extends MaterialItem {
     public static final SlimefunItemStack MAGSTEEL = new SlimefunItemStack(
             "MAGSTEEL",
             Material.BRICK,
-            "&4MagSteel"
+            "&4鎂鋼"
     );
     public static final SlimefunItemStack MAGNONIUM = new SlimefunItemStack(
             "MAGNONIUM",
             Material.NETHER_BRICK,
-            "&5Magnonium"
+            "&5磁振子元素"
     );
     public static final SlimefunItemStack TITANIUM = new SlimefunItemStack(
             "TITANIUM",
             Material.IRON_INGOT,
-            "&7Titanium"
+            "&7鈦"
     );
     public static final SlimefunItemStack MYTHRIL = new SlimefunItemStack(
             "MYTHRIL",
             Material.IRON_INGOT,
-            "&bMythril"
+            "&b秘銀"
     );
     public static final SlimefunItemStack ADAMANTITE = new SlimefunItemStack(
             "ADAMANTITE",
             Material.BRICK,
-            "&dAdamantite"
+            "&d精金"
     );
     public static final SlimefunItemStack INFINITY = new SlimefunItemStack(
             "INFINITE_INGOT",
             Material.IRON_INGOT,
-            "&bInfinity Ingot", // &dI&cn&6f&ei&an&bi&3t&9y &fIngot
-            "&7&oThe fury of the cosmos",
-            "&7&oin the palm of your hand"
+            "&b無限錠", // &dI&cn&6f&ei&an&bi&3t&9y &fIngot
+            "&7&o宇宙之怒",
+            "&7&o在手裡掌握著"
     );
     public static final SlimefunItemStack FORTUNE = new SlimefunItemStack(
             "FORTUNE_SINGULARITY",
             Material.NETHER_STAR,
-            "&6Fortune Singularity"
+            "&6幸運奇點"
     );
     public static final SlimefunItemStack EARTH = new SlimefunItemStack(
             "EARTH_SINGULARITY",
             Material.NETHER_STAR,
-            "&aEarth Singularity"
+            "&a地球奇點"
     );
     public static final SlimefunItemStack METAL = new SlimefunItemStack(
             "METAL_SINGULARITY",
             Material.NETHER_STAR,
-            "&8Metal Singularity"
+            "&8金屬奇點"
     );
     public static final SlimefunItemStack MAGIC = new SlimefunItemStack(
             "MAGIC_SINGULARITY",
             Material.NETHER_STAR,
-            "&dMagic Singularity"
+            "&d魔法奇點"
     );
 
     public static void setup(InfinityExpansion plugin) {

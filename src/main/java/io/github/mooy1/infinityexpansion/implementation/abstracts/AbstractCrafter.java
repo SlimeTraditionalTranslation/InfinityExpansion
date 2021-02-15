@@ -133,7 +133,7 @@ public abstract class AbstractCrafter extends AbstractTicker {
         if (output == null) { //invalid
 
             inv.replaceExistingItem(STATUS_SLOT, MenuPreset.invalidRecipe);
-            MessageUtils.messageWithCD(p, 1000, ChatColor.RED + "Invalid Recipe!");
+            MessageUtils.messageWithCD(p, 1000, ChatColor.RED + "無效的配方!");
 
         } else {
             
@@ -143,7 +143,7 @@ public abstract class AbstractCrafter extends AbstractTicker {
                 int required = output.getSecondValue()[slot];
                 if (required == 0 ? input != null : input.getAmount() < required) {
                     inv.replaceExistingItem(STATUS_SLOT, MenuPreset.invalidRecipe);
-                    MessageUtils.messageWithCD(p, 1000, ChatColor.RED + "Invalid input amounts!");
+                    MessageUtils.messageWithCD(p, 1000, ChatColor.RED + "無效的輸入數量!");
                     return;
                 }
             }
@@ -151,7 +151,7 @@ public abstract class AbstractCrafter extends AbstractTicker {
             if (!inv.fits(output.getFirstValue(), OUTPUT_SLOT)) { //not enough room
 
                 inv.replaceExistingItem(STATUS_SLOT, MenuPreset.notEnoughRoom);
-                MessageUtils.messageWithCD(p, 1000, ChatColor.GOLD + "Not enough room!");
+                MessageUtils.messageWithCD(p, 1000, ChatColor.GOLD + "空間不足!");
 
             } else { //enough room
 
@@ -161,7 +161,7 @@ public abstract class AbstractCrafter extends AbstractTicker {
                         inv.consumeItem(INPUT_SLOTS[i], amount);
                     }
                 }
-                MessageUtils.messageWithCD(p, 1000, ChatColor.GREEN + "Crafted: " + ItemUtils.getItemName(output.getFirstValue()));
+                MessageUtils.messageWithCD(p, 1000, ChatColor.GREEN + "製作: " + ItemUtils.getItemName(output.getFirstValue()));
 
                 postCraft(inv.getLocation(), inv, p);
 

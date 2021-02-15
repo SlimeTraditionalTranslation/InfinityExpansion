@@ -37,8 +37,8 @@ public final class StoneworksFactory extends AbstractMachine implements RecipeDi
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "STONEWORKS_FACTORY",
             Material.BLAST_FURNACE,
-            "&8Stoneworks Factory",
-            "&7Generates cobblestone and processes it into various materials",
+            "&8石材工廠",
+            "&7生產鵝卵石並將其加工成各種材料",
             "",
             LorePreset.energyPerSecond(StoneworksFactory.ENERGY)
     );
@@ -52,7 +52,7 @@ public final class StoneworksFactory extends AbstractMachine implements RecipeDi
     private static final int[] CHOICE_SLOTS = {11, 13, 15};
     private static final int[] PROCESS_SLOTS = {10, 12, 14};
     private static final ItemStack COBBLE_GEN = new CustomItem(Material.GRAY_CONCRETE, "&8Cobblegen");
-    private static final ItemStack PROCESSING = new CustomItem(Material.GRAY_STAINED_GLASS_PANE, "&7Processing");
+    private static final ItemStack PROCESSING = new CustomItem(Material.GRAY_STAINED_GLASS_PANE, "&7加工中");
 
     public StoneworksFactory() {
         super(Categories.ADVANCED_MACHINES, ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
@@ -236,23 +236,23 @@ public final class StoneworksFactory extends AbstractMachine implements RecipeDi
 
     @AllArgsConstructor
     private enum Choice {
-        NONE(new CustomItem(Material.BARRIER, "&cNone", "", "&7 > Click to cycle"),
+        NONE(new CustomItem(Material.BARRIER, "&c無", "", "&7 > 點擊循環"),
                 new Material[0],
                 new Material[0]
         ),
-        FURNACE(new CustomItem(Material.FURNACE, "&8Smelting", "", "&7 > Click to cycle"),
+        FURNACE(new CustomItem(Material.FURNACE, "&8冶煉", "", "&7 > 點擊循環"),
                 new Material[]{Material.COBBLESTONE, Material.SAND},
                 new Material[]{Material.STONE, Material.GLASS}
         ),
-        CRUSH(new CustomItem(Material.DIAMOND_PICKAXE, "&8Crushing", "", "&7 > Click to cycle"),
+        CRUSH(new CustomItem(Material.DIAMOND_PICKAXE, "&8壓碎", "", "&7 > 點擊循環"),
                 new Material[]{Material.COBBLESTONE, Material.GRAVEL},
                 new Material[]{Material.GRAVEL, Material.SAND}
         ),
-        COMPACT(new CustomItem(Material.PISTON, "&8Compacting", "", "&7 > Click to cycle"),
+        COMPACT(new CustomItem(Material.PISTON, "&8壓縮", "", "&7 > 點擊循環"),
                 new Material[]{Material.STONE, Material.GRANITE, Material.DIORITE, Material.ANDESITE},
                 new Material[]{Material.STONE_BRICKS, Material.POLISHED_GRANITE, Material.POLISHED_DIORITE, Material.POLISHED_ANDESITE}
         ),
-        TRANSFORM(new CustomItem(Material.ANDESITE, "&8Transforming", "", "&7 > Click to cycle"),
+        TRANSFORM(new CustomItem(Material.ANDESITE, "&8轉化", "", "&7 > 點擊循環"),
                 new Material[]{Material.COBBLESTONE, Material.ANDESITE, Material.DIORITE},
                 new Material[]{Material.ANDESITE, Material.DIORITE, Material.GRANITE}
         );

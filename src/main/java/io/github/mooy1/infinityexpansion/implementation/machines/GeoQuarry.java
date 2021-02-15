@@ -40,8 +40,8 @@ public final class GeoQuarry extends AbstractMachine implements RecipeDisplayIte
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "GEO_QUARRY",
             Material.QUARTZ_BRICKS,
-            "&fGeo Quarry",
-            "&7Slowly harvests geo resources from the void using power",
+            "&fGeo採石場",
+            "&7緩慢的使用能量採集虛空中的Geo資源",
             "",
             LorePreset.energyPerSecond(GeoQuarry.ENERGY)
     );
@@ -128,7 +128,7 @@ public final class GeoQuarry extends AbstractMachine implements RecipeDisplayIte
     protected boolean process(@Nonnull BlockMenu inv, @Nonnull Block b, @Nonnull Config data) {
         if (PluginUtils.getCurrentTick() % 40 != 0) {
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aDrilling..."));
+                inv.replaceExistingItem(STATUS, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a挖掘中..."));
             }
             return true;
         }
@@ -155,7 +155,7 @@ public final class GeoQuarry extends AbstractMachine implements RecipeDisplayIte
 
         inv.pushItem(output.clone(), OUTPUT_SLOTS);
         if (inv.hasViewer()) {
-            inv.replaceExistingItem(STATUS, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aFound!"));
+            inv.replaceExistingItem(STATUS, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a發現!"));
         }
         return true;
     }

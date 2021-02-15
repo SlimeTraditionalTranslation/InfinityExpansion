@@ -44,9 +44,9 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "INFINITY_REACTOR",
             Material.BEACON,
-            "&bInfinity Reactor",
-            "&7Generates power through the compression",
-            "&7of &8Void &7and &bInfinity &7Ingots",
+            "&b無限反應爐",
+            "&7通過壓縮發電",
+            "&7於&8虛無&7和&b無限&7錠",
             "",
             LorePreset.energyBuffer(InfinityReactor.STORAGE),
             LorePreset.energyPerSecond(InfinityReactor.ENERGY)
@@ -97,11 +97,11 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
         }
         for (int i : MenuPreset.slotChunk3) {
             blockMenuPreset.addItem(i, new CustomItem(
-                    Material.BLACK_STAINED_GLASS_PANE, "&8Void Ingot Input"), ChestMenuUtils.getEmptyClickHandler());
+                    Material.BLACK_STAINED_GLASS_PANE, "&8放入虛空錠"), ChestMenuUtils.getEmptyClickHandler());
         }
         for (int i : MenuPreset.slotChunk1) {
             blockMenuPreset.addItem(i, new CustomItem(
-                    Material.WHITE_STAINED_GLASS_PANE, "&fInfinity Ingot Input"), ChestMenuUtils.getEmptyClickHandler());
+                    Material.WHITE_STAINED_GLASS_PANE, "&f放入無限錠"), ChestMenuUtils.getEmptyClickHandler());
         }
         blockMenuPreset.addItem(STATUS_SLOT, MenuPreset.loadingItemRed, ChestMenuUtils.getEmptyClickHandler());
     }
@@ -131,7 +131,7 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
             if (!Objects.equals(StackUtils.getIDofNullable(inv.getItemInSlot(INPUT_SLOTS[0])), "INFINITE_INGOT")) { //wrong input
 
                 if (inv.hasViewer()) {
-                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.RED_STAINED_GLASS_PANE, "&cInput more &fInfinity Ingots"));
+                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.RED_STAINED_GLASS_PANE, "&c放入更多的&f無限錠"));
                 }
                 return 0;
 
@@ -140,7 +140,7 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
             if (!Objects.equals(StackUtils.getIDofNullable(inv.getItemInSlot(INPUT_SLOTS[1])), "VOID_INGOT")) { //wrong input
 
                 if (inv.hasViewer()) {
-                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.RED_STAINED_GLASS_PANE, "&cInput more &8Void Ingots"));
+                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.RED_STAINED_GLASS_PANE, "&c放入更多的&8虛空錠"));
                 }
                 return 0;
 
@@ -149,9 +149,9 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
             //correct input
             if (inv.hasViewer()) {
                 inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE,
-                                "&aStarting Generation",
-                                "&aTime until infinity ingot needed: " + INFINITY_INTERVAL,
-                                "&aTime until void ingot needed: " + VOID_INTERVAL
+                                "&a開始發電",
+                                "&a直到需要無限錠的時間: " + INFINITY_INTERVAL,
+                                "&a直到需要虛空錠的時間: " + VOID_INTERVAL
                         ));
             }
             inv.consumeItem(INPUT_SLOTS[0]);
@@ -164,7 +164,7 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
         if (progress >= INFINITY_INTERVAL) { //done
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aFinished Generation"));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a完成發電"));
             }
             BlockStorage.addBlockInfo(l, "progress", "0");
             return ENERGY;
@@ -176,7 +176,7 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
             if (!Objects.equals(StackUtils.getIDofNullable(inv.getItemInSlot(INPUT_SLOTS[1])), "VOID_INGOT")) { //wrong input
 
                 if (inv.hasViewer()) {
-                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.RED_STAINED_GLASS_PANE, "&cInput more &8Void Ingots"));
+                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.RED_STAINED_GLASS_PANE, "&c放入更多的&8虛空錠"));
                 }
                 return 0;
 
@@ -185,9 +185,9 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
             //right input
             if (inv.hasViewer()) {
                 inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE,
-                                "&aGenerating...",
-                                "&aTime until infinity ingot needed: " + (INFINITY_INTERVAL - progress),
-                                "&aTime until void ingot needed: " + (VOID_INTERVAL - Math.floorMod(progress, VOID_INTERVAL))
+                                "&a發電中...",
+                                "&a直到需要無限錠的時間: " + (INFINITY_INTERVAL - progress),
+                                "&a直到需要虛空錠的時間: " + (VOID_INTERVAL - Math.floorMod(progress, VOID_INTERVAL))
                         ));
             }
             BlockStorage.addBlockInfo(l, "progress", String.valueOf(progress + 1));
@@ -200,9 +200,9 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
 
         if (inv.hasViewer()) {
             inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE,
-                            "&aGenerating...",
-                            "&aTime until infinity ingot needed: " + (INFINITY_INTERVAL - progress),
-                            "&aTime until void ingot needed: " + (VOID_INTERVAL - Math.floorMod(progress, VOID_INTERVAL))
+                            "&a發電中...",
+                            "&a直到需要無限錠的時間: " + (INFINITY_INTERVAL - progress),
+                            "&a直到需要虛空錠的時間: " + (VOID_INTERVAL - Math.floorMod(progress, VOID_INTERVAL))
                     )
             );
         }
@@ -226,12 +226,12 @@ public final class InfinityReactor extends AbstractGenerator implements RecipeDi
         List<ItemStack> items = new ArrayList<>();
 
         ItemStack item = SmelteryItem.INFINITY.clone();
-        LoreUtils.addLore(item, "", ChatColor.GOLD + "Lasts for 1 day");
+        LoreUtils.addLore(item, "", ChatColor.GOLD + "持續1天");
         items.add(item);
         items.add(null);
 
         item = CompressedItem.VOID_INGOT.clone();
-        LoreUtils.addLore(item, "", ChatColor.GOLD + "Lasts for 4 hours");
+        LoreUtils.addLore(item, "", ChatColor.GOLD + "持續4小時");
         items.add(item);
         items.add(null);
 

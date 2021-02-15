@@ -12,8 +12,8 @@ public final class MiscItem extends MaterialItem {
     public static final SlimefunItemStack VOID_BIT = new SlimefunItemStack(
             "VOID_BIT",
             Material.IRON_NUGGET,
-            "&8Void Bit",
-            "&7&oIt feels... empty"
+            "&8虛空之點",
+            "&7&o感覺就像是... 虛無"
     );
     
     public static void setup(InfinityExpansion plugin) {

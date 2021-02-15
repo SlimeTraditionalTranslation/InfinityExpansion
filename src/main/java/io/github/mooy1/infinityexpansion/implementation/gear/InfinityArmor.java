@@ -83,37 +83,37 @@ public final class InfinityArmor extends SlimefunArmorPiece implements Protectiv
     public static final SlimefunItemStack CROWN = new SlimefunItemStack(
             "INFINITY_CROWN",
             Material.NETHERITE_HELMET,
-            "&bInfinity Crown",
-            "&7Saturation I",
-            "&7Night Vision I",
-            "&7Water Breathing I",
-            "&7Elytra Crash Immunity"
+            "&b無限頭冠",
+            "&7飽食 I",
+            "&7夜視 I",
+            "&7水下呼吸 I",
+            "&7免疫鞘翅墜落傷害"
     );
     public static final SlimefunItemStack CHESTPLATE = new SlimefunItemStack(
             "INFINITY_CHESTPLATE",
             Material.NETHERITE_CHESTPLATE,
-            "&bInfinity Chestplate",
-            "&7Strength II",
-            "&7Health Boost III",
-            "&7Resistance II",
-            "&7Bee Sting Immunity"
+            "&b無限胸甲",
+            "&7力量 II",
+            "&7生命值提升 III",
+            "&7抗性 II",
+            "&7免疫蜜蜂螫"
     );
     public static final SlimefunItemStack LEGGINGS = new SlimefunItemStack(
             "INFINITY_LEGGINGS",
             Material.NETHERITE_LEGGINGS,
-            "&bInfinity Leggings",
-            "&7Haste III",
-            "&7Conduit Power I",
-            "&7Regeneration I",
-            "&7Radiation Immunity"
+            "&b無限護腿",
+            "&7挖掘加速 III",
+            "&7海靈祝福 I",
+            "&7回復 I",
+            "&7免疫輻射"
     );
     public static final SlimefunItemStack BOOTS = new SlimefunItemStack(
             "INFINITY_BOOTS",
             Material.NETHERITE_BOOTS,
-            "&bInfinity Boots",
-            "&7Speed III",
-            "&7Dolphins Grace I",
-            "&7Fire Resistance I"
+            "&b無限靴子",
+            "&7加速 III",
+            "&7海豚悠游 I",
+            "&7抗火 I"
     );
     
     private InfinityArmor(SlimefunItemStack item, PotionEffect[] effects, ItemStack[] recipe) {

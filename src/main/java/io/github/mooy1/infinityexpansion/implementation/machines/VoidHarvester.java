@@ -60,8 +60,8 @@ public final class VoidHarvester extends AbstractMachine implements RecipeDispla
     public static final SlimefunItemStack BASIC = new SlimefunItemStack(
             "VOID_HARVESTER",
             Material.OBSIDIAN,
-            "&8Void Harvester",
-            "&7Slowly harvests &8Void &7Bits from nothing...",
+            "&8虛空收割機",
+            "&7緩慢的從虛無中收集 &8虛空&7之點...",
             "",
             LorePreset.speed(1),
             LorePreset.energyPerSecond(120)
@@ -69,8 +69,8 @@ public final class VoidHarvester extends AbstractMachine implements RecipeDispla
     public static final SlimefunItemStack INFINITE = new SlimefunItemStack(
             "INFINITE_VOID_HARVESTER",
             Material.CRYING_OBSIDIAN,
-            "&bInfinite &8Void Harvester",
-            "&7Harvests &8Void &7Bits from nothing...",
+            "&b無限&8虛空收割機",
+            "&7從虛無中收集 &8虛空&7之點...",
             "",
             LorePreset.speed(32),
             LorePreset.energyPerSecond(1200)
@@ -138,7 +138,7 @@ public final class VoidHarvester extends AbstractMachine implements RecipeDispla
         setProgress(b, progress);
         if (inv.hasViewer()) { //update status
             inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE,
-                    "&aHarvesting - " + progress * 100 / TIME + "%",
+                    "&a收集中 - " + progress * 100 / TIME + "%",
                     "&7(" + progress + "/" + TIME + ")"
             ));
         }

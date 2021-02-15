@@ -62,15 +62,15 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "VEIN_MINER_RUNE",
             Material.DIAMOND,
-            "&bVein Miner Rune",
-            "&7Upgrades a tool to vein-mine certain materials"
+            "&b礦脈礦工符文",
+            "&7升級工具來連鎖挖一些材料"
     );
     private static final double RANGE = 1.5;
     private static final int MAX = 64;
     private static final long CD = 1000;
     private static final NamespacedKey key = PluginUtils.getKey("vein_miner");
     private static final Map<UUID, Long> CDS = new HashMap<>();
-    private static final String LORE = ChatColor.AQUA + "Veinminer - Crouch to use";
+    private static final String LORE = ChatColor.AQUA + "礦脈礦工 - 使用時蹲下";
     private static final Set<String> ALLOWED = new HashSet<>(Arrays.asList(
             "_ORE", "_LOG", "_WOOD", "GILDED", "SOUL", "GRAVEL",
             "MAGMA", "OBSIDIAN", "DIORITE", "ANDESITE", "GRANITE", "_LEAVES",
@@ -127,14 +127,14 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
                         setVeinMiner(itemStack, true);
                         l.getWorld().dropItemNaturally(l, itemStack);
 
-                        MessageUtils.message(p, ChatColor.GREEN + "Added Vein Miner to tool!");
+                        MessageUtils.message(p, ChatColor.GREEN + "增加礦脈礦工至工具上!");
                     } else {
-                        MessageUtils.message(p, ChatColor.RED + "Failed to add vein miner!");
+                        MessageUtils.message(p, ChatColor.RED + "增加礦脈礦工失敗!");
                     }
                 }, 10L);
                 
             } else {
-                MessageUtils.message(p, ChatColor.RED + "Failed to add vein miner!");
+                MessageUtils.message(p, ChatColor.RED + "增加礦脈礦工失敗!");
             }
         }
     }
@@ -200,7 +200,7 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
         }
             
         if (p.getFoodLevel() == 0) {
-            MessageUtils.messageWithCD(p, 500, ChatColor.GOLD + "You are too tired to vein-mine!");
+            MessageUtils.messageWithCD(p, 500, ChatColor.GOLD + "你太累了, 無法連鎖挖!");
             return;
         }
         
@@ -214,7 +214,7 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
 
         Long prev = CDS.get(p.getUniqueId());
         if (prev != null && System.currentTimeMillis() - prev < CD) {
-            MessageUtils.messageWithCD(p, 500, ChatColor.GOLD + "Wait " + ChatColor.YELLOW + (CD - (System.currentTimeMillis() - prev)) + ChatColor.GOLD + " ms before using again!");
+            MessageUtils.messageWithCD(p, 500, ChatColor.GOLD + "等待 " + ChatColor.YELLOW + (CD - (System.currentTimeMillis() - prev)) + ChatColor.GOLD + " ms 之後再次使用!");
             return;
         }
         CDS.put(p.getUniqueId(), System.currentTimeMillis());

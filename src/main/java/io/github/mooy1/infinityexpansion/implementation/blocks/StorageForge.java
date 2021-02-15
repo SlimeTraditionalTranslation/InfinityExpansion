@@ -26,9 +26,9 @@ public final class StorageForge extends AbstractCrafter {
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "STORAGE_FORGE",
             Material.BEEHIVE,
-            "&6Storage Forge",
-            "&7Upgrades the tier of Storage Units",
-            "&7Retains stored items"
+            "&6儲存鍛造",
+            "&7升級儲存單元",
+            "&7保留儲存的物品"
     );
     
     public static final DelayedRecipeType TYPE = new DelayedRecipeType(ITEM);
@@ -48,7 +48,7 @@ public final class StorageForge extends AbstractCrafter {
 
     @Override
     public void postCraft(@Nonnull Location l, @Nonnull BlockMenu inv, @Nonnull Player p) {
-        MessageUtils.message(p, ChatColor.GREEN + "Transferred items to upgraded unit");
+        MessageUtils.message(p, ChatColor.GREEN + "將物品轉移至升級的單元");
     }
     
 }

@@ -32,9 +32,9 @@ public final class PoweredBedrock extends SlimefunItem implements EnergyNetCompo
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "POWERED_BEDROCK",
             Material.NETHERITE_BLOCK,
-            "&4Powered Bedrock",
-            "&7When powered, transforms into a bedrock",
-            "&7Will revert once unpowered or broken",
+            "&4電動基岩",
+            "&7當通電時, 將會轉化成基岩",
+            "&7斷掉或損壞後還原",
             "",
             LorePreset.energyPerSecond(PoweredBedrock.ENERGY)
     );

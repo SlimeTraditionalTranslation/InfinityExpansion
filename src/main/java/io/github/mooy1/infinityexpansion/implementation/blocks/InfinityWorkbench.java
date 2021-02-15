@@ -44,10 +44,10 @@ public final class InfinityWorkbench extends AbstractEnergyCrafter {
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "INFINITY_FORGE",
             Material.RESPAWN_ANCHOR,
-            "&6Infinity Workbench",
-            "&7Used to craft infinity items",
+            "&6無限工作台",
+            "&7用於製作無限物品",
             "",
-            LorePreset.energy(ENERGY) + "per item"
+            LorePreset.energy(ENERGY) + "個物品"
     );
     
     public static final int[] INPUT_SLOTS = {
@@ -75,7 +75,7 @@ public final class InfinityWorkbench extends AbstractEnergyCrafter {
             ITEMS.put(item.getItemId(), new Pair<>(item, stacks));
             IDS.add(item.getItemId());
         }
-    }, "", "&cUse the infinity recipes category to see the correct recipe!");
+    }, "", "&c使用無限配方目錄來查看正確的配方!");
     
     public InfinityWorkbench() {
         super(Categories.MAIN_MATERIALS, ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
@@ -105,7 +105,7 @@ public final class InfinityWorkbench extends AbstractEnergyCrafter {
         for (int i : STATUS_BORDER) {
             blockMenuPreset.addItem(i, MenuPreset.borderItemStatus, ChestMenuUtils.getEmptyClickHandler());
         }
-        blockMenuPreset.addItem(RECIPE_SLOT, new CustomItem(Material.BOOK, "&6Recipes"), ChestMenuUtils.getEmptyClickHandler());
+        blockMenuPreset.addItem(RECIPE_SLOT, new CustomItem(Material.BOOK, "&6配方"), ChestMenuUtils.getEmptyClickHandler());
         blockMenuPreset.addItem(STATUS_SLOT, MenuPreset.invalidInput, ChestMenuUtils.getEmptyClickHandler());
     }
     
@@ -126,8 +126,8 @@ public final class InfinityWorkbench extends AbstractEnergyCrafter {
          
         if (charge < ENERGY) { //not enough energy
             MessageUtils.messageWithCD(p, 1000,
-                    ChatColor.RED + "Not enough energy!",
-                    ChatColor.GREEN + "Charge: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + ENERGY + " J"
+                    ChatColor.RED + "能量不足!",
+                    ChatColor.GREEN + "充能: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + ENERGY + " J"
             );
             return;
         }
@@ -135,12 +135,12 @@ public final class InfinityWorkbench extends AbstractEnergyCrafter {
         LargeOutput output = RECIPES.get(inv, INPUT_SLOTS);
         
         if (output == null) { //invalid
-            MessageUtils.messageWithCD(p, 1000, ChatColor.RED + "Invalid Recipe!");
+            MessageUtils.messageWithCD(p, 1000, ChatColor.RED + "無效的配方!");
             return;
         }
             
         if (!inv.fits(output.getOutput(), OUTPUT_SLOTS)) { //not enough room
-            MessageUtils.messageWithCD(p, 1000, ChatColor.GOLD + "Not enough room!");
+            MessageUtils.messageWithCD(p, 1000, ChatColor.GOLD + "空間不足!");
             return;
         }
 
@@ -150,7 +150,7 @@ public final class InfinityWorkbench extends AbstractEnergyCrafter {
             }
         }
         
-        MessageUtils.message(p, ChatColor.GREEN + "Successfully crafted: " + ChatColor.WHITE + output.getOutput().getItemMeta().getDisplayName());
+        MessageUtils.message(p, ChatColor.GREEN + "成功製作: " + ChatColor.WHITE + output.getOutput().getItemMeta().getDisplayName());
 
         inv.pushItem(output.getOutput().clone(), OUTPUT_SLOTS);
         setCharge(b.getLocation(), 0);

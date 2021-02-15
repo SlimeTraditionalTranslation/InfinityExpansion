@@ -58,7 +58,7 @@ public final class MaterialGenerator extends AbstractMachine implements RecipeDi
     public static final SlimefunItemStack BASIC_COBBLE = new SlimefunItemStack(
             "BASIC_COBBLE_GEN",
             Material.SMOOTH_STONE,
-            "&9Basic &8Cobble Generator",
+            "&9基本&8鵝卵石製造機",
             "",
             LorePreset.speed(1),
             LorePreset.energyPerSecond(24)
@@ -66,7 +66,7 @@ public final class MaterialGenerator extends AbstractMachine implements RecipeDi
     public static final SlimefunItemStack ADVANCED_COBBLE = new SlimefunItemStack(
             "ADVANCED_COBBLE_GEN",
             Material.SMOOTH_STONE,
-            "&cAdvanced &8Cobble Generator",
+            "&c高級&8鵝卵石製造機",
             "",
             LorePreset.speed(4),
             LorePreset.energyPerSecond(120)
@@ -74,7 +74,7 @@ public final class MaterialGenerator extends AbstractMachine implements RecipeDi
     public static final SlimefunItemStack BASIC_OBSIDIAN = new SlimefunItemStack(
             "BASIC_OBSIDIAN_GEN",
             Material.SMOOTH_STONE,
-            "&8Obsidian Generator",
+            "&8黑曜石製造機",
             "",
             LorePreset.speed(1),
             LorePreset.energyPerSecond(240)
@@ -175,7 +175,7 @@ public final class MaterialGenerator extends AbstractMachine implements RecipeDi
         inv.pushItem(output, OUTPUT_SLOTS);
 
         if (inv.hasViewer()) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aGenerating..."));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a製造中..."));
         }
 
         return true;

@@ -68,8 +68,8 @@ public final class TreeGrower extends AbstractMachine implements RecipeDisplayIt
     public static final SlimefunItemStack BASIC = new SlimefunItemStack(
             "BASIC_TREE_GROWER",
             Material.STRIPPED_OAK_WOOD,
-            "&9Basic &2Tree Grower",
-            "&7Automatically grows, harvests, and replants trees",
+            "&9基本&2虛擬植樹場",
+            "&7自動成長, 收成和重新種植樹木",
             "",
             LorePreset.speed(1),
             LorePreset.energyPerSecond(36)
@@ -77,8 +77,8 @@ public final class TreeGrower extends AbstractMachine implements RecipeDisplayIt
     public static final SlimefunItemStack ADVANCED = new SlimefunItemStack(
             "ADVANCED_TREE_GROWER",
             Material.STRIPPED_ACACIA_WOOD,
-            "&cAdvanced &2Tree Grower",
-            "&7Automatically grows, harvests, and replants trees",
+            "&c高級&2虛擬植樹場",
+            "&7自動成長, 收成和重新種植樹木",
             "",
             LorePreset.speed(5),
             LorePreset.energyPerSecond(180)
@@ -86,8 +86,8 @@ public final class TreeGrower extends AbstractMachine implements RecipeDisplayIt
     public static final SlimefunItemStack INFINITY = new SlimefunItemStack(
             "INFINITY_TREE_GROWER",
             Material.STRIPPED_WARPED_HYPHAE,
-            "&bInfinity &2Tree Grower",
-            "&7Automatically grows, harvests, and replants trees",
+            "&b無限&2虛擬植樹場",
+            "&7自動成長, 收成和重新種植樹木",
             "",
             LorePreset.speed(25),
             LorePreset.energyPerSecond(1800)
@@ -150,7 +150,7 @@ public final class TreeGrower extends AbstractMachine implements RecipeDisplayIt
             if (input == null) {
 
                 if (inv.hasViewer()) {
-                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9Input a sapling"));
+                    inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9放入樹苗"));
                 }
 
             } else {
@@ -160,7 +160,7 @@ public final class TreeGrower extends AbstractMachine implements RecipeDisplayIt
                 if (inputType == null) {
 
                     if (inv.hasViewer()) {
-                        inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&cInput a sapling!"));
+                        inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&c放入樹苗!"));
                     }
 
                     for (int slot : OUTPUT_SLOTS) {
@@ -179,7 +179,7 @@ public final class TreeGrower extends AbstractMachine implements RecipeDisplayIt
 
                     if (inv.hasViewer()) {
                         inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE,
-                                "&aPlanting... (" + this.speed + "/" + TIME + ")"));
+                                "&a種植中... (" + this.speed + "/" + TIME + ")"));
                     }
 
                     return true;
@@ -193,7 +193,7 @@ public final class TreeGrower extends AbstractMachine implements RecipeDisplayIt
             setProgress(b, progress + this.speed);
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aGrowing... (" + (progress + this.speed) + "/" + TIME + ")"));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a成長中... (" + (progress + this.speed) + "/" + TIME + ")"));
             }
             return true;
         }
@@ -223,7 +223,7 @@ public final class TreeGrower extends AbstractMachine implements RecipeDisplayIt
             }
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aHarvesting..."));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a收成中..."));
             }
 
             setProgress(b, 0);

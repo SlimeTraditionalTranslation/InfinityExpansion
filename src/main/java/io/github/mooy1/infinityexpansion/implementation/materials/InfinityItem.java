@@ -13,14 +13,14 @@ public final class InfinityItem extends UnplaceableBlock {
     public static final SlimefunItemStack CIRCUIT = new SlimefunItemStack(
             "INFINITE_MACHINE_CIRCUIT",
             Material.DIAMOND,
-            "&bInfinite &6Machine Circuit",
-            "&7Machine Component"
+            "&b無限&6機器電路板",
+            "&7機器組件"
     );
     public static final SlimefunItemStack CORE = new SlimefunItemStack(
             "INFINITE_MACHINE_CORE",
             Material.DIAMOND_BLOCK,
-            "&bInfinite Machine Core",
-            "&7Machine Component"
+            "&b無限機器核心",
+            "&7機器組件"
     );
     
     public static void setup(InfinityExpansion plugin) {

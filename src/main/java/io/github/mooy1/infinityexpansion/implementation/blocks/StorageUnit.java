@@ -94,32 +94,32 @@ public final class StorageUnit extends AbstractTicker {
     public static final SlimefunItemStack BASIC = new SlimefunItemStack(
             "BASIC_STORAGE",
             Material.OAK_WOOD,
-            "&9Basic &8Storage Unit",
+            "&9基本&8儲存單元",
             LorePreset.storesItem(StorageUnit.BASIC_STORAGE)
     );
     public static final SlimefunItemStack ADVANCED = new SlimefunItemStack(
             "ADVANCED_STORAGE",
             Material.DARK_OAK_WOOD,
-            "&cAdvanced &8Storage Unit",
+            "&c高級&8儲存單元",
             LorePreset.storesItem(StorageUnit.ADVANCED_STORAGE)
     );
     public static final SlimefunItemStack REINFORCED = new SlimefunItemStack(
             "REINFORCED_STORAGE",
             Material.ACACIA_WOOD,
-            "&fReinforced &8Storage Unit",
+            "&f強化&8儲存單元",
             LorePreset.storesItem(StorageUnit.REINFORCED_STORAGE)
     );
     public static final SlimefunItemStack VOID = new SlimefunItemStack(
             "VOID_STORAGE",
             Material.CRIMSON_HYPHAE,
-            "&8Void &8Storage Unit",
+            "&8虛空&8儲存單元",
             LorePreset.storesItem(StorageUnit.VOID_STORAGE)
     );
     public static final SlimefunItemStack INFINITY = new SlimefunItemStack(
             "INFINITY_STORAGE",
             Material.WARPED_HYPHAE,
-            "&bInfinity &8Storage Unit",
-            "&6Capacity: &eInfinite items"
+            "&b無限&8儲存單元",
+            "&6容量: &e無限 物品"
     );
     
     private static final boolean DISPLAY_SIGNS = InfinityExpansion.getInstance().getConfig().getBoolean("storage-unit-options.display-signs");
@@ -159,7 +159,7 @@ public final class StorageUnit extends AbstractTicker {
 
                 drop.setItemMeta(saveData(drop.getItemMeta(), id, storedItem, tryToStoreOrDrop(menu, stored, storedItem, INPUT_SLOT, OUTPUT_SLOT)));
 
-                MessageUtils.message(e.getPlayer(), ChatColor.GREEN + "Stored items transferred to dropped item");
+                MessageUtils.message(e.getPlayer(), ChatColor.GREEN + "已將儲存物品轉移至掉落物品上");
 
                 e.getBlock().getWorld().dropItemNaturally(l, drop);
             }
@@ -174,7 +174,7 @@ public final class StorageUnit extends AbstractTicker {
         BlockStorage.addBlockInfo(b, STORED_ITEM, data.getFirstValue());
         BlockStorage.addBlockInfo(b, STORED_AMOUNT, String.valueOf(data.getSecondValue()));
         if (data.getFirstValue() != null) {
-            MessageUtils.message(e.getPlayer(), ChatColor.GREEN + "Stored items transferred to block");
+            MessageUtils.message(e.getPlayer(), ChatColor.GREEN + "已將儲存物品轉回至方塊上");
         }
     }
 
@@ -230,7 +230,7 @@ public final class StorageUnit extends AbstractTicker {
         if (meta != null) {
             List<String> lore = meta.getLore();
             if (lore != null) {
-                lore.add(ChatColor.GOLD + "Stored: " + ChatColor.WHITE + ItemUtils.getItemName(display) + ChatColor.YELLOW + " x " + amount);
+                lore.add(ChatColor.GOLD + "已儲存: " + ChatColor.WHITE + ItemUtils.getItemName(display) + ChatColor.YELLOW + " x " + amount);
                 meta.setLore(lore);
             }
             meta.getPersistentDataContainer().set(ITEM_KEY, PersistentDataType.STRING, id);
@@ -348,14 +348,14 @@ public final class StorageUnit extends AbstractTicker {
             if (stored == null) {
                 menu.replaceExistingItem(STATUS_SLOT, new CustomItem(
                         new ItemStack(Material.BARRIER),
-                        "&cEmpty"
+                        "&c空"
                 ));
             } else {
                 ItemStack status = new CustomItem(
                         stored,
                         ChatColor.WHITE + ItemUtils.getItemName(stored),
-                        "&6Stored: &e" + LorePreset.format(amount) + (this.max == INFINITY_STORAGE ? "" : "/" + LorePreset.format(this.max) + " &7(" + Math.round((float) 100 * amount / this.max)  + "%)"),
-                        "&7Stacks: " + LorePreset.format(Math.round((float) amount / stored.getMaxStackSize()))
+                        "&6已儲存: &e" + LorePreset.format(amount) + (this.max == INFINITY_STORAGE ? "" : "/" + LorePreset.format(this.max) + " &7(" + Math.round((float) 100 * amount / this.max)  + "%)"),
+                        "&7已儲存幾組: " + LorePreset.format(Math.round((float) amount / stored.getMaxStackSize()))
                 );
                 status.setAmount(1);
                 menu.replaceExistingItem(STATUS_SLOT, status);
@@ -377,8 +377,8 @@ public final class StorageUnit extends AbstractTicker {
                     if (sign.getRelative(wall.getFacing().getOppositeFace()).equals(block)) {
                         Sign lines = (Sign) sign.getState();
                         lines.setLine(0, ChatColor.AQUA + "------------");
-                        lines.setLine(1, ChatColor.WHITE + (stored != null ? ItemUtils.getItemName(stored) : "None"));
-                        lines.setLine(2, ChatColor.GRAY + "Stored: " + amount);
+                        lines.setLine(1, ChatColor.WHITE + (stored != null ? ItemUtils.getItemName(stored) : "無"));
+                        lines.setLine(2, ChatColor.GRAY + "已儲存: " + amount);
                         lines.setLine(3, ChatColor.AQUA + "------------");
                         lines.update();
                         break;

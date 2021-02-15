@@ -104,8 +104,8 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack HYDRO = new SlimefunItemStack(
             "HYDRO_GENERATOR",
             Material.PRISMARINE_WALL,
-            "&9Hydro Generator",
-            "&7Generates energy from the movement of water",
+            "&9水力發電機",
+            "&7在流動的水中產生能量",
             "",
             LorePreset.energyBuffer(600),
             LorePreset.energyPerSecond(6)
@@ -113,9 +113,9 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack REINFORCED_HYDRO = new SlimefunItemStack(
             "REINFORCED_HYDRO_GENERATOR",
             Material.END_STONE_BRICK_WALL,
-            "&fReinforced &9Hydro Gen",
-            "&7Generates large amounts of energy",
-            "&7from the movement of water",
+            "&f強化&9水力發電機",
+            "&7產生更多的能量",
+            "&7從流動的水中",
             "",
             LorePreset.energyBuffer(3000),
             LorePreset.energyPerSecond(30)
@@ -123,8 +123,8 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack GEOTHERMAL = new SlimefunItemStack(
             "GEOTHERMAL_GENERATOR",
             Material.MAGMA_BLOCK,
-            "&cGeothermal Generator",
-            "&7Generates energy from the heat of the world",
+            "&c地熱發電機",
+            "&7從世界的熱能中產生能量",
             "",
             LorePreset.energyBuffer(4500),
             LorePreset.energyPerSecond(45)
@@ -132,9 +132,9 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack REINFORCED_GEOTHERMAL = new SlimefunItemStack(
             "REINFORCED_GEOTHERMAL_GENERATOR",
             Material.SHROOMLIGHT,
-            "&fReinforced &cGeothermal Gen",
-            "&7Generates large amounts of energy",
-            "&7from the heat of the world",
+            "&f強化&c地熱發電機",
+            "&7產生更多的能量",
+            "&7從世界的熱能中",
             "",
             LorePreset.energyBuffer(22500),
             LorePreset.energyPerSecond(225)
@@ -142,8 +142,8 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack BASIC_PANEL = new SlimefunItemStack(
             "BASIC_PANEL",
             Material.BLUE_GLAZED_TERRACOTTA,
-            "&9Basic Solar Panel",
-            "&7Generates energy from the sun",
+            "&9基本太陽能板",
+            "&7從太陽產生能量",
             "",
             LorePreset.energyBuffer(900),
             LorePreset.energyPerSecond(9)
@@ -151,8 +151,8 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack ADVANCED_PANEL = new SlimefunItemStack(
             "ADVANCED_PANEL",
             Material.RED_GLAZED_TERRACOTTA,
-            "&cAdvanced Solar Panel",
-            "&7Generates energy from the sun",
+            "&c高級太陽能板",
+            "&7從太陽產生能量",
             "",
             LorePreset.energyBuffer(18000),
             LorePreset.energyPerSecond(180)
@@ -160,8 +160,8 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack CELESTIAL_PANEL = new SlimefunItemStack(
             "CELESTIAL_PANEL",
             Material.YELLOW_GLAZED_TERRACOTTA,
-            "&eCelestial Panel",
-            "&7Generates energy from the sun",
+            "&e天體面板",
+            "&7從太陽產生能量",
             "",
             LorePreset.energyBuffer(75000),
             LorePreset.energyPerSecond(750)
@@ -169,8 +169,8 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack VOID_PANEL = new SlimefunItemStack(
             "VOID_PANEL",
             Material.LIGHT_GRAY_GLAZED_TERRACOTTA,
-            "&8Void Panel",
-            "&7Generates energy from darkness",
+            "&8虛空面板",
+            "&7從黑暗中產生能量",
             "",
             LorePreset.energyBuffer(360000),
             LorePreset.energyPerSecond(3600)
@@ -178,8 +178,8 @@ public final class EnergyGenerator extends AbstractGenerator {
     public static final SlimefunItemStack INFINITE_PANEL = new SlimefunItemStack(
             "INFINITE_PANEL",
             Material.LIGHT_BLUE_GLAZED_TERRACOTTA,
-            "&bInfinity Panel",
-            "&7Generates energy from the cosmos",
+            "&b無限面板",
+            "&7從宇宙中產生能量",
             "",
             LorePreset.energyBuffer(7500000),
             LorePreset.energyPerSecond(75000)
@@ -226,8 +226,8 @@ public final class EnergyGenerator extends AbstractGenerator {
             if (inv.hasViewer()) {
                 inv.replaceExistingItem(4, new CustomItem(
                         Material.GREEN_STAINED_GLASS_PANE,
-                        "&cNot generating",
-                        "&7Stored: &6" + LorePreset.format(getCharge(l)) + " J"
+                        "&c未發電",
+                        "&7已儲存: &6" + LorePreset.format(getCharge(l)) + " J"
                 ));
             }
             return 0;
@@ -236,10 +236,10 @@ public final class EnergyGenerator extends AbstractGenerator {
             if (inv.hasViewer()) {
                 inv.replaceExistingItem(4, new CustomItem(
                         Material.GREEN_STAINED_GLASS_PANE,
-                        "&aGeneration",
-                        "&7Type: &6" + type.status,
-                        "&7Generating: &6" + LorePreset.roundHundreds(gen * PluginUtils.TICK_RATIO) + " J/s ",
-                        "&7Stored: &6" + LorePreset.format(getCharge(l)) + " J"
+                        "&a發電",
+                        "&7類型: &6" + type.status,
+                        "&7產生中: &6" + LorePreset.roundHundreds(gen * PluginUtils.TICK_RATIO) + " J/s ",
+                        "&7已儲存: &6" + LorePreset.format(getCharge(l)) + " J"
                 ));
             }
             return gen;
@@ -311,13 +311,13 @@ public final class EnergyGenerator extends AbstractGenerator {
     }
 
     private enum Type {
-        WATER("Hydroelectric", false),
-        GEOTHERMAL("Geothermal", false),
-        SOLAR("Day", false),
-        LUNAR("Night", false),
-        INFINITY("Infinity", false),
+        WATER("水力發電", false),
+        GEOTHERMAL("地熱", false),
+        SOLAR("日間", false),
+        LUNAR("夜間", false),
+        INFINITY("無限", false),
         
-        NETHER("Nether (2x)", true);
+        NETHER("地獄 (2x)", true);
         
         private final String status;
         private final boolean more;

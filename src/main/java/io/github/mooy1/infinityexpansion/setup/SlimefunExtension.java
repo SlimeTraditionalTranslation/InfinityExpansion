@@ -69,8 +69,8 @@ public final class SlimefunExtension {
     public static final SlimefunItemStack ADVANCED_GEO_MINER = new SlimefunItemStack(
             "ADVANCED_GEO_MINER",
             HeadTexture.GEO_MINER,
-            "&cAdvanced &fGeoMiner",
-            "&7A faster geo-miner",
+            "&c高級&fGeo挖礦機",
+            "&7更快的 geo挖礦",
             "",
             LorePreset.speed(SlimefunExtension.ADVANCED_GEO_SPEED),
             LorePreset.energyPerSecond(SlimefunExtension.ADVANCED_GEO_ENERGY)
@@ -79,8 +79,8 @@ public final class SlimefunExtension {
     public static final SlimefunItemStack ADVANCED_CHARGER = new SlimefunItemStack(
             "ADVANCED_CHARGER",
             Material.HONEYCOMB_BLOCK,
-            "&cAdvanced Charger",
-            "&7Quickly charges items",
+            "&c高級充電台",
+            "&7快速物品充電",
             "",
             LorePreset.speed(SlimefunExtension.ADVANCED_CHARGER_SPEED),
             LorePreset.energyPerSecond(SlimefunExtension.ADVANCED_CHARGER_ENERGY)
@@ -88,8 +88,8 @@ public final class SlimefunExtension {
     public static final SlimefunItemStack INFINITY_CHARGER = new SlimefunItemStack(
             "INFINITY_CHARGER",
             Material.SEA_LANTERN,
-            "&bInfinity Charger",
-            "&7Instantly charges items",
+            "&b無限充電台",
+            "&7瞬間把物品充滿電",
             "",
             LorePreset.speed(SlimefunExtension.INFINITY_CHARGER_SPEED),
             LorePreset.energy(SlimefunExtension.INFINITY_CHARGER_ENERGY) + "per use"
@@ -97,11 +97,11 @@ public final class SlimefunExtension {
     public static final SlimefunItemStack ADVANCED_NETHER_STAR_REACTOR = new SlimefunItemStack(
             "ADVANCED_NETHER_STAR_REACTOR",
             HeadTexture.NETHER_STAR_REACTOR,
-            "&cAdvanced Nether Star Reactor",
-            "&fRuns on Nether Stars",
-            "&bMust be surrounded by Water",
-            "&bMust be supplied with Nether Ice Coolant Cells",
-            "&4Causes nearby Entities to get Withered",
+            "&c高級地獄之星反應爐",
+            "&f需要地獄之星",
+            "&b必須被水包圍",
+            "&b必須使用「地獄冰冷卻單元」",
+            "&4使附近的實體得到「凋零 II」",
             "",
             LorePreset.energyBuffer(SlimefunExtension.STAR_BUFFER),
             LorePreset.energyPerSecond(SlimefunExtension.STAR_ENERGY)
@@ -109,7 +109,7 @@ public final class SlimefunExtension {
     public static final SlimefunItemStack ADVANCED_ENCHANTER = new SlimefunItemStack(
             "ADVANCED_ENCHANTER",
             Material.ENCHANTING_TABLE,
-            "&cAdvanced Enchanter",
+            "&c高級自動附魔器",
             "",
             LorePreset.speed(SlimefunExtension.ADVANCED_EN_SPEED),
             LorePreset.energyPerSecond(SlimefunExtension.ADVANCED_EN_ENERGY)
@@ -117,7 +117,7 @@ public final class SlimefunExtension {
     public static final SlimefunItemStack ADVANCED_DISENCHANTER = new SlimefunItemStack(
             "ADVANCED_DISENCHANTER",
             Material.ENCHANTING_TABLE,
-            "&cAdvanced Disenchanter",
+            "&c高級自動退魔器",
             "",
             LorePreset.speed(SlimefunExtension.ADVANCED_DIS_SPEED),
             LorePreset.energyPerSecond(SlimefunExtension.ADVANCED_DIS_ENERGY)
@@ -125,34 +125,34 @@ public final class SlimefunExtension {
     public static final SlimefunItemStack INFINITY_ENCHANTER = new SlimefunItemStack(
             "INFINITY_ENCHANTER",
             Material.ENCHANTING_TABLE,
-            "&bInfinity Enchanter",
+            "&b無限自動附魔器",
             "",
             LorePreset.speed(SlimefunExtension.INFINITY_EN_SPEED),
-            LorePreset.energy(SlimefunExtension.INFINITY_EN_ENERGY) + "per use"
+            LorePreset.energy(SlimefunExtension.INFINITY_EN_ENERGY) + "次使用"
     );
     public static final SlimefunItemStack INFINITY_DISENCHANTER = new SlimefunItemStack(
             "INFINITY_DISENCHANTER",
             Material.ENCHANTING_TABLE,
-            "&bInfinity Disenchanter",
+            "&b無限自動退魔器",
             "",
             LorePreset.speed(SlimefunExtension.INFINITY_DIS_SPEED),
-            LorePreset.energy(SlimefunExtension.INFINITY_DIS_ENERGY) + "per use"
+            LorePreset.energy(SlimefunExtension.INFINITY_DIS_ENERGY) + "次使用"
     );
     public static final SlimefunItemStack INFINITY_CAPACITOR = new SlimefunItemStack(
             "INFINITY_CAPACITOR",
             HeadTexture.CAPACITOR_25,
-            "&bInfinite Capacitor",
-            "&c&oDo not use more than ",
-            "&c&o1 per energy network",
+            "&b無限電容",
+            "&c&o不要使用超過 ",
+            "&c&o1個以上在每個能源網路中",
             "",
-            "&8\u21E8 &e\u26A1 &bInfinite &7J Capacity"
+            "&8\u21E8 &e\u26A1 &b無限 &7J 容量"
     );
     public static final SlimefunItemStack VOID_CAPACITOR = new SlimefunItemStack(
             "VOID_CAPACITOR",
             HeadTexture.CAPACITOR_25,
-            "&8Void Capacitor",
+            "&8虛空電容",
             "",
-            "&8\u21E8 &e\u26A1 " + LorePreset.roundHundreds(VOID_CAPACITY) + " &7J Capacity"
+            "&8\u21E8 &e\u26A1 " + LorePreset.roundHundreds(VOID_CAPACITY) + " &7J 容量"
     );
     
     public static void setup(InfinityExpansion plugin) {

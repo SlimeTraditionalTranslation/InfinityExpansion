@@ -11,45 +11,45 @@ public final class CompressedItem extends MachineItem {
     public static final SlimefunItemStack VOID_DUST = new SlimefunItemStack(
             "VOID_DUST",
             Material.GUNPOWDER,
-            "&8Void Dust",
-            "&7&oIts starting to take form..."
+            "&8虛空粉",
+            "&7&o它開始形成..."
     );
     public static final SlimefunItemStack VOID_INGOT = new SlimefunItemStack(
             "VOID_INGOT",
             Material.NETHERITE_INGOT,
-            "&8Void Ingot",
-            "&7&oThe emptiness of the cosmos",
-            "&7&oin the palm of your hand"
+            "&8虛空錠",
+            "&7&o宇宙中的虛無",
+            "&7&o就在你手掌中"
     );
     public static final SlimefunItemStack COBBLE_1 = new SlimefunItemStack(
             "COMPRESSED_COBBLESTONE_1",
             Material.ANDESITE,
-            "&7Single Compressed Cobblestone",
-            "&89 cobblestone combined"
+            "&7單壓縮鵝卵石",
+            "&89個鵝卵石結合而成"
     );
     public static final SlimefunItemStack COBBLE_2 = new SlimefunItemStack(
             "COMPRESSED_COBBLESTONE_2",
             Material.ANDESITE,
-            "&7Double Compressed Cobblestone",
-            "&881 cobblestone combined"
+            "&7雙重壓縮鵝卵石",
+            "&881個鵝卵石結合而成"
     );
     public static final SlimefunItemStack COBBLE_3 = new SlimefunItemStack(
             "COMPRESSED_COBBLESTONE_3",
             Material.STONE,
-            "&7Triple Compressed Cobblestone",
-            "&8729 cobblestone combined"
+            "&7三重壓縮鵝卵石",
+            "&8729個鵝卵石結合而成"
     );
     public static final SlimefunItemStack COBBLE_4 = new SlimefunItemStack(
             "COMPRESSED_COBBLESTONE_4",
             Material.STONE,
-            "&7Quadruple Compressed Cobblestone",
-            "&86,561 cobblestone combined"
+            "&7四重壓縮鵝卵石",
+            "&86,561個鵝卵石結合而成"
     );
     public static final SlimefunItemStack COBBLE_5 = new SlimefunItemStack(
             "COMPRESSED_COBBLESTONE_5",
             Material.POLISHED_ANDESITE,
-            "&7Quintuple Compressed Cobblestone",
-            "&859,049 cobblestone combined"
+            "&7五重壓縮鵝卵石",
+            "&859,049個鵝卵石結合而成"
     );
     
     public static void setup(InfinityExpansion plugin) {

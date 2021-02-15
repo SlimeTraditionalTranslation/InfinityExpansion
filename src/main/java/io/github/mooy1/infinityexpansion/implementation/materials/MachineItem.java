@@ -12,27 +12,27 @@ public class MachineItem extends MaterialItem {
     public static final SlimefunItemStack MAGSTEEL_PLATE = new SlimefunItemStack(
             "MAGSTEEL_PLATE",
             Material.NETHERITE_SCRAP,
-            "&4MagSteel Plate",
-            "&7Machine Component"
+            "&4鎂鋼板",
+            "&7機器組件"
     );
     public static final SlimefunItemStack MACHINE_PLATE = new SlimefunItemStack(
             "MACHINE_PLATE",
             Material.PAPER,
-            "&fMachine Plate",
-            "&7Machine Component"
+            "&f機器板",
+            "&7機器組件"
     );
     public static final SlimefunItemStack MACHINE_CIRCUIT = new SlimefunItemStack(
             "MACHINE_CIRCUIT",
             Material.GOLD_INGOT,
-            "&6Machine Circuit",
-            "&7Machine Component"
+            "&6機器電路板",
+            "&7機器組件"
     );
 
     public static final SlimefunItemStack MACHINE_CORE = new SlimefunItemStack(
             "MACHINE_CORE",
             Material.IRON_BLOCK,
-            "&fMachine Core",
-            "&7Machine Component"
+            "&f機器核心",
+            "&7機器組件"
     );
 
     public static void setup(InfinityExpansion plugin) {

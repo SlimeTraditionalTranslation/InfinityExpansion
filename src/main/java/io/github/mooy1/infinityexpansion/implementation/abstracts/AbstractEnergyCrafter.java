@@ -37,9 +37,9 @@ public abstract class AbstractEnergyCrafter extends AbstractTicker implements En
             if (charge < this.energy) { //not enough energy
                 blockMenu.replaceExistingItem(this.statusSlot, new CustomItem(
                         Material.RED_STAINED_GLASS_PANE,
-                        "&cNot enough energy!",
+                        "&c電力不足!",
                         "",
-                        "&aCharge: " + charge + "/" + this.energy + " J",
+                        "&a充能: " + charge + "/" + this.energy + " J",
                         ""
                 ));
             } else {

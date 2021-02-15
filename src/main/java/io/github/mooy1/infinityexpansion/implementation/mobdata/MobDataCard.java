@@ -55,82 +55,82 @@ public final class MobDataCard extends SlimefunItem implements RecipeDisplayItem
     
     public enum Type {
 
-        ZOMBIE("Zombie", 60, 1, 2, new ItemStack[]{
+        ZOMBIE("殭屍", 60, 1, 2, new ItemStack[]{
                 new ItemStack(Material.IRON_SWORD, 1), new ItemStack(Material.ROTTEN_FLESH, 16), new ItemStack(Material.IRON_SHOVEL, 1),
                 new ItemStack(Material.IRON_INGOT, 64), EmptyDataCard.ITEM, new ItemStack(Material.IRON_INGOT, 1),
                 new ItemStack(Material.CARROT, 64), new ItemStack(Material.ROTTEN_FLESH, 16), new ItemStack(Material.POTATO, 64)
         }, ImmutableMap.of(1, new ItemStack(Material.ROTTEN_FLESH, 1), 8, new ItemStack(Material.IRON_INGOT))),
 
-        COW("Cow", 30, 1, 1, new ItemStack[]{
+        COW("牛", 30, 1, 1, new ItemStack[]{
                 new ItemStack(Material.LEATHER, 64), new ItemStack(Material.BEEF, 64), new ItemStack(Material.LEATHER, 64),
                 new ItemStack(Material.COOKED_BEEF, 64), EmptyDataCard.ITEM, new ItemStack(Material.COOKED_BEEF, 64),
                 new ItemStack(Material.LEATHER, 64), new ItemStack(Material.BEEF, 64), new ItemStack(Material.LEATHER, 64)
         }, ImmutableMap.of(1, new ItemStack(Material.BEEF, 1), 2, new ItemStack(Material.LEATHER, 2))),
 
-        SHEEP("Sheep", 30, 1, 1, new ItemStack[]{
+        SHEEP("綿羊", 30, 1, 1, new ItemStack[]{
                 new ItemStack(Material.WHITE_WOOL, 64), new ItemStack(Material.MUTTON, 64), new ItemStack(Material.WHITE_WOOL, 64),
                 new ItemStack(Material.COOKED_MUTTON, 64), EmptyDataCard.ITEM, new ItemStack(Material.COOKED_MUTTON, 64),
                 new ItemStack(Material.WHITE_WOOL, 64), new ItemStack(Material.MUTTON, 64), new ItemStack(Material.WHITE_WOOL, 64)
         }, ImmutableMap.of(1, new ItemStack(Material.MUTTON, 1), 2, new ItemStack(Material.WHITE_WOOL, 2))),
         
-        SPIDER("Spider", 90, 1, 2, new ItemStack[]{
+        SPIDER("蜘蛛", 90, 1, 2, new ItemStack[]{
                 new ItemStack(Material.COBWEB, 8), new ItemStack(Material.STRING, 64), new ItemStack(Material.COBWEB, 8),
                 new ItemStack(Material.SPIDER_EYE, 32), EmptyDataCard.ITEM, new ItemStack(Material.SPIDER_EYE, 32),
                 new ItemStack(Material.COBWEB, 8), new ItemStack(Material.STRING, 64), new ItemStack(Material.COBWEB, 8)
         }, ImmutableMap.of(1, new ItemStack(Material.STRING, 2), 2, new ItemStack(Material.SPIDER_EYE))),
 
-        SKELLY("Skeleton", 90, 1, 2, new ItemStack[]{
+        SKELLY("骷髏", 90, 1, 2, new ItemStack[]{
                 new ItemStack(Material.LEATHER_HELMET, 1), new ItemStack(Material.BONE, 64), new ItemStack(Material.LEATHER_HELMET, 1),
                 new ItemStack(Material.ARROW, 64), EmptyDataCard.ITEM, new ItemStack(Material.ARROW, 64),
                 new ItemStack(Material.BOW, 1), new ItemStack(Material.BONE, 64), new ItemStack(Material.BOW, 1)
         }, ImmutableMap.of(1, new ItemStack(Material.BONE, 2), 2, new ItemStack(Material.ARROW, 2), 16, new ItemStack(Material.BOW))),
 
-        WITHER_SKELLY("Wither Skeleton", 150, 3, 2, new ItemStack[]{
+        WITHER_SKELLY("凋零骷髏", 150, 3, 2, new ItemStack[]{
                 new ItemStack(Material.WITHER_SKELETON_SKULL, 8), new ItemStack(Material.BONE, 64), new ItemStack(Material.WITHER_SKELETON_SKULL, 8),
                 new ItemStack(Material.COAL_BLOCK, 64), EmptyDataCard.ITEM, new ItemStack(Material.COAL_BLOCK, 64),
                 new ItemStack(Material.STONE_SWORD, 1), new ItemStack(Material.BONE, 64), new ItemStack(Material.STONE_SWORD, 1)
         }, ImmutableMap.of(1, new ItemStack(Material.COAL, 1), 2, new ItemStack(Material.BONE, 2),
                 3, new ItemStack(Material.COAL, 2), 12, new ItemStack(Material.WITHER_SKELETON_SKULL))),
 
-        ENDERMEN("Endermen", 240, 5, 2, new ItemStack[]{
+        ENDERMEN("終界使者", 240, 5, 2, new ItemStack[]{
                 new ItemStack(Material.ENDER_EYE, 16), new ItemStack(Material.OBSIDIAN, 64), new ItemStack(Material.ENDER_EYE, 16),
                 new ItemStack(Material.ENDER_PEARL, 16), EmptyDataCard.ITEM, new ItemStack(Material.ENDER_PEARL, 16),
                 new ItemStack(Material.ENDER_EYE, 16), new ItemStack(Material.OBSIDIAN, 64), new ItemStack(Material.ENDER_EYE, 16)
         }, ImmutableMap.of(1, new ItemStack(Material.ENDER_PEARL, 1), 2, new ItemStack(Material.ENDER_PEARL, 1), 6, EnderEssence.ITEM)),
 
-        CREEPER("Creeper", 120, 2, 2, new ItemStack[]{
+        CREEPER("苦力怕", 120, 2, 2, new ItemStack[]{
                 new ItemStack(Material.TNT, 16), new ItemStack(Material.GREEN_DYE, 64), new ItemStack(Material.TNT, 16),
                 new ItemStack(Material.GUNPOWDER, 16), EmptyDataCard.ITEM, new ItemStack(Material.GUNPOWDER, 16),
                 new ItemStack(Material.TNT, 16), new ItemStack(Material.GREEN_DYE, 64), new ItemStack(Material.TNT, 16)
         }, ImmutableMap.of(1, new ItemStack(Material.GUNPOWDER, 1), 2, new ItemStack(Material.GUNPOWDER, 1))),
 
-        GUARDIAN("Guardian", 240, 2, 2, new ItemStack[]{
+        GUARDIAN("深海守衛", 240, 2, 2, new ItemStack[]{
                 new ItemStack(Material.COD, 16), new ItemStack(Material.PRISMARINE_SHARD, 64), new ItemStack(Material.PRISMARINE_CRYSTALS, 64),
                 new ItemStack(Material.SPONGE, 4), EmptyDataCard.ITEM, new ItemStack(Material.PUFFERFISH, 4),
                 new ItemStack(Material.PRISMARINE_CRYSTALS, 64), new ItemStack(Material.PRISMARINE_SHARD, 64), new ItemStack(Material.COOKED_COD, 16)
         }, ImmutableMap.of(1, new ItemStack(Material.PRISMARINE_SHARD), 2, new ItemStack(Material.PRISMARINE_CRYSTALS),
                 3, new ItemStack(Material.COD), 8, new ItemStack(Material.PUFFERFISH), 16, new ItemStack(Material.SPONGE))),
 
-        CHICKEN("Chicken", 60, 1, 1, new ItemStack[]{
+        CHICKEN("雞", 60, 1, 1, new ItemStack[]{
                 new ItemStack(Material.CHICKEN, 64), new ItemStack(Material.FEATHER, 64), new ItemStack(Material.COOKED_CHICKEN, 64),
                 new ItemStack(Material.EGG, 16), EmptyDataCard.ITEM, new ItemStack(Material.EGG, 16),
                 new ItemStack(Material.COOKED_CHICKEN, 64), new ItemStack(Material.FEATHER, 64), new ItemStack(Material.CHICKEN, 64)
         }, ImmutableMap.of(1, new ItemStack(Material.CHICKEN, 1), 2, new ItemStack(Material.FEATHER, 2),
                 3, new ItemStack(Material.CHICKEN, 1), 12, new ItemStack(Material.EGG))),
 
-        IRON("Iron Golem", 180, 1, 2, new ItemStack[]{
+        IRON("鐵魔像", 180, 1, 2, new ItemStack[]{
                 new ItemStack(Material.IRON_BLOCK, 64), new ItemStack(Material.PUMPKIN, 16), new ItemStack(Material.IRON_BLOCK, 64),
                 new ItemStack(Material.POPPY, 16), EmptyDataCard.ITEM, new ItemStack(Material.POPPY, 16),
                 new ItemStack(Material.IRON_BLOCK, 64), new ItemStack(Material.PUMPKIN, 16), new ItemStack(Material.IRON_BLOCK, 64)
         }, ImmutableMap.of(1, new ItemStack(Material.IRON_INGOT, 2), 3, SlimefunItems.BASIC_CIRCUIT_BOARD, 4, new ItemStack(Material.POPPY, 1))),
 
-        BLAZE("Blaze", 150, 5, 2, new ItemStack[]{
+        BLAZE("烈焰使者", 150, 5, 2, new ItemStack[]{
                 new ItemStack(Material.MAGMA_BLOCK, 64), new ItemStack(Material.BLAZE_ROD, 64), new ItemStack(Material.MAGMA_BLOCK, 64),
                 new ItemStack(Material.BLAZE_ROD, 64), EmptyDataCard.ITEM, new ItemStack(Material.BLAZE_ROD, 64),
                 new ItemStack(Material.MAGMA_BLOCK, 64), new ItemStack(Material.BLAZE_ROD, 64), new ItemStack(Material.MAGMA_BLOCK, 64)
         }, ImmutableMap.of(1, new ItemStack(Material.BLAZE_ROD, 1), 2, new ItemStack(Material.BLAZE_ROD, 1))),
 
-        DRAGON("Ender Dragon", 9000, 150, 3, new ItemStack[]{
+        DRAGON("終界龍", 9000, 150, 3, new ItemStack[]{
                 new ItemStack(Material.END_CRYSTAL, 64), new ItemStack(Material.DRAGON_EGG), new ItemStack(Material.CHORUS_FLOWER, 64),
                 SlimefunItems.INFUSED_ELYTRA, EmptyDataCard.ITEM, new ItemStack(Material.DRAGON_HEAD, 1),
                 new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3, 64), CompressedItem.VOID_INGOT, new ItemStack(Material.DRAGON_BREATH, 64)
@@ -154,8 +154,8 @@ public final class MobDataCard extends SlimefunItem implements RecipeDisplayItem
             this.item = new SlimefunItemStack(
                     name.toUpperCase(Locale.ROOT).replace(" ", "_") + "_DATA_CARD",
                     tier == 1 ? Material.IRON_CHESTPLATE : tier == 2 ? Material.DIAMOND_CHESTPLATE : Material.NETHERITE_CHESTPLATE,
-                    "&b" + name + " Data Card",
-                    "&7Place in a mob simulation chamber to activate",
+                    "&b" + name + "資料卡",
+                    "&7放入怪物模擬室來啟用",
                     "",
                     LorePreset.energyPerSecond(energy)
             );

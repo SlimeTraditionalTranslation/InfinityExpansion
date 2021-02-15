@@ -43,7 +43,7 @@ import java.util.UUID;
 public class InfinityCategory extends FlexCategory implements Listener {
     
     public static final InfinityCategory CATEGORY = new InfinityCategory(PluginUtils.getKey("infinity_recipes"),
-            new CustomItem(Material.RESPAWN_ANCHOR, "&bInfinity &7Recipes"), 3
+            new CustomItem(Material.RESPAWN_ANCHOR, "&b無限&7配方"), 3
     );
 
     private static final int[] INFINITY_RECIPE_SLOTS = {
@@ -80,11 +80,11 @@ public class InfinityCategory extends FlexCategory implements Listener {
             7, 16, 17
     };
     private static final ItemStack BENCH = new CustomItem(Material.NETHER_STAR,
-            "&bCreate the recipe from items in your inventory: ",
-            "&aLeft-Click to move 1 set",
-            "&aRight-Click to move as many sets as possible"
+            "&b從背包物品中直接擺好配方: ",
+            "&a左鍵 移動1套",
+            "&a右鍵 以移動盡可能多套的"
     );
-    private static final ItemStack INFO = new CustomItem(Material.CYAN_STAINED_GLASS_PANE, "&3Info");
+    private static final ItemStack INFO = new CustomItem(Material.CYAN_STAINED_GLASS_PANE, "&3資訊");
     
     private static final HashMap<UUID, String> history = new HashMap<>();
 
@@ -115,7 +115,7 @@ public class InfinityCategory extends FlexCategory implements Listener {
             }
         }
         
-        ChestMenu menu = new ChestMenu("&bInfinity Recipes");
+        ChestMenu menu = new ChestMenu("&b無限配方");
 
         if (entry.mode != null && entry.profile != null) {
             menu.addMenuClickHandler(1, (player1, i, itemStack, clickAction) -> {

@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.mooy1</groupId>
     <artifactId>InfinityExpansion</artifactId>
-    <version>MODIFIED</version>
+    <version>Efina 1.0</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -62,9 +62,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.github.mooy1</groupId>
+            <groupId>io.github.xMikux</groupId>
             <artifactId>InfinityLib</artifactId>
-            <version>cf155ec</version>
+            <version>52fc3c4</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

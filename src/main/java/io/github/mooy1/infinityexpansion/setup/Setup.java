@@ -144,7 +144,7 @@ public final class Setup {
             if (lore == null) {
                 lore = new ArrayList<>();
             }
-            lore.add(ChatColor.AQUA + "Soulbound");
+            lore.add(ChatColor.AQUA + "靈魂綁定");
             meta.setLore(lore);
             item.setItemMeta(meta);
 

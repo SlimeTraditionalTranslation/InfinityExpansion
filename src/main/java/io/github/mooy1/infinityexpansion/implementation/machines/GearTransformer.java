@@ -35,10 +35,10 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "GEAR_TRANSFORMER",
             Material.EMERALD_BLOCK,
-            "&7Gear Transformer",
-            "&7Changes the material of vanilla tools and gear",
+            "&7裝備變壓機",
+            "&7改變原版工具和裝備的材料",
             "",
-            LorePreset.energy(GearTransformer.ENERGY) + "Per Use"
+            LorePreset.energy(GearTransformer.ENERGY) + "次使用"
     );
 
     public static final int ENERGY = 12000;
@@ -86,10 +86,10 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
             blockMenuPreset.addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
         }
         for (int i : MenuPreset.slotChunk1) {
-            blockMenuPreset.addItem(i, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9Tool Input"), ChestMenuUtils.getEmptyClickHandler());
+            blockMenuPreset.addItem(i, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9放入工具"), ChestMenuUtils.getEmptyClickHandler());
         }
         for (int i : MenuPreset.slotChunk3) {
-            blockMenuPreset.addItem(i, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9Material Input"), ChestMenuUtils.getEmptyClickHandler());
+            blockMenuPreset.addItem(i, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9放入材料"), ChestMenuUtils.getEmptyClickHandler());
         }
         for (int i : OUTPUT_BORDER) {
             blockMenuPreset.addItem(i, MenuPreset.borderItemOutput, ChestMenuUtils.getEmptyClickHandler());
@@ -236,13 +236,13 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
 
         if (inputItem == null) { //no input
 
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9Input a tool or piece of gear"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9放入工具或裝備"));
             return;
 
         }
 
         if (!SF && StackUtils.getID(inputItem) != null) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.RED_STAINED_GLASS_PANE, "&cSlimefun items may not have their material changed!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.RED_STAINED_GLASS_PANE, "&cSlimefun物品可能不會改變它的材料!"));
             return;
         }
 
@@ -250,7 +250,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
 
         if (inputToolType == null) { //invalid input
 
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&cNot a tool or piece of gear!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&c不是工具或裝備!"));
             return;
 
         }
@@ -259,7 +259,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
 
         if (inputMaterial == null) { //no material
 
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9Input materials"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, "&9放入材料"));
             return;
 
         }
@@ -268,7 +268,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
 
         if (pair == null) { //invalid material
 
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&cInvalid Materials!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.BARRIER, "&c無效材料!"));
             return;
 
         }
@@ -289,7 +289,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
         inv.replaceExistingItem(INPUT_SLOT1, null);
         inv.consumeItem(INPUT_SLOT2, pair.getSecondValue());
 
-        inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aTool Transformed!"));
+        inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a工具已改變!"));
     }
 
 }

@@ -126,16 +126,16 @@ public final class ConversionMachine extends AbstractMachine implements RecipeDi
     public static final SlimefunItemStack EXTREME_FREEZER = new SlimefunItemStack(
             "EXTREME_FREEZER",
             Material.LIGHT_BLUE_CONCRETE,
-            "&bExtreme Freezer",
-            "&7Converts ice into coolant",
+            "&b極致冷凍機",
+            "&7將冰轉化成冷卻單元",
             "",
             LorePreset.energyPerSecond(90)
     );
     public static final SlimefunItemStack DUST_EXTRACTOR = new SlimefunItemStack(
             "DUST_EXTRACTOR",
             Material.FURNACE,
-            "&8Dust Extractor",
-            "&7Converts cobble into dusts",
+            "&8粉抽取機",
+            "&7將鵝卵石轉化成粉",
             "",
             LorePreset.energyPerSecond(180)
     );
@@ -143,16 +143,16 @@ public final class ConversionMachine extends AbstractMachine implements RecipeDi
     public static final SlimefunItemStack URANIUM_EXTRACTOR = new SlimefunItemStack(
             "URANIUM_EXTRACTOR",
             Material.LIME_CONCRETE,
-            "&aUranium Extractor",
-            "&7Converts cobble into uranium",
+            "&a鈾提取機",
+            "&7將鵝卵石轉化成鈾",
             "",
             LorePreset.energyPerSecond(240)
     );
     public static final SlimefunItemStack DECOMPRESSOR = new SlimefunItemStack(
             "DECOMPRESSOR",
             Material.TARGET,
-            "&7Decompressor",
-            "&7Reduces blocks to their base material",
+            "&7解壓縮器",
+            "&7還原方塊至它原本的材料",
             "",
             LorePreset.energyPerSecond(60)
     );

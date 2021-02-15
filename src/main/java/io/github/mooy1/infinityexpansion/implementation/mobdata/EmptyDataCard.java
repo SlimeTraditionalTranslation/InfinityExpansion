@@ -15,8 +15,8 @@ public final class EmptyDataCard extends SlimefunItem implements NotPlaceable {
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "EMPTY_DATA_CARD",
             Material.CHAINMAIL_CHESTPLATE,
-            "&8Empty Data Card",
-            "&7Infuse with a mob's items to fill"
+            "&8空資料卡",
+            "&7注入怪物的物品以填補"
     );
     
     public EmptyDataCard() {

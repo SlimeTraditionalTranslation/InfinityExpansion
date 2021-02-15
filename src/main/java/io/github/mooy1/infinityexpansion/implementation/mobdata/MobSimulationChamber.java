@@ -37,8 +37,8 @@ public final class MobSimulationChamber extends AbstractTicker implements Energy
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "MOB_SIMULATION_CHAMBER",
             Material.GILDED_BLACKSTONE,
-            "&8Mob Simulation Chamber",
-            "&7Use mob data cards to activate",
+            "&8怪物模擬室",
+            "&7使用資料卡來啟動",
             "",
             LorePreset.energyBuffer(MobSimulationChamber.BUFFER),
             LorePreset.energyPerSecond(MobSimulationChamber.ENERGY)
@@ -53,7 +53,7 @@ public final class MobSimulationChamber extends AbstractTicker implements Energy
     public static final int ENERGY = 240;
     private static final int CHANCE = ConfigUtils.getInt("balance-options.mob-simulation-xp-chance", 1, 10, 2);
 
-    private static final ItemStack NO_CARD = new CustomItem(Material.BARRIER, "&cInput a Mob Data Card!");
+    private static final ItemStack NO_CARD = new CustomItem(Material.BARRIER, "&c放入怪物資料卡!");
     
     public MobSimulationChamber() {
         super(Categories.MOB_SIMULATION, ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
@@ -80,7 +80,7 @@ public final class MobSimulationChamber extends AbstractTicker implements Energy
     
     @Nonnull
     private static ItemStack makeSimulating(int energy) {
-        return new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aSimulating... (" + Math.round(energy * PluginUtils.TICK_RATIO) + " J/s)");
+        return new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a模擬中... (" + Math.round(energy * PluginUtils.TICK_RATIO) + " J/s)");
     }
 
     @Nonnull
@@ -138,7 +138,7 @@ public final class MobSimulationChamber extends AbstractTicker implements Energy
     }
     
     private static ItemStack makeXpItem(int stored) {
-        return new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aStored xp: " + stored, "", "&a> Click to claim");
+        return new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a已儲存經驗值: " + stored, "", "&a> 點擊領取");
     }
 
     private static void setXp(Location l, int xp) {

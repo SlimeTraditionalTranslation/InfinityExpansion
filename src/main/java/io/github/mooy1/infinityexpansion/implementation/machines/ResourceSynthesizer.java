@@ -40,10 +40,10 @@ public final class ResourceSynthesizer extends AbstractMachine implements Recipe
     public static final SlimefunItemStack ITEM = new SlimefunItemStack(
             "RESOURCE_SYNTHESIZER",
             Material.LODESTONE,
-            "&6Resource Synthesizer",
-            "&7Creates resources by combining 2 Singularities",
+            "&6資源合成器",
+            "&7結合2個奇點創造資源",
             "",
-            LorePreset.energy(ResourceSynthesizer.ENERGY) + "per use"
+            LorePreset.energy(ResourceSynthesizer.ENERGY) + "次使用"
     );
     
     private static final int[] OUTPUT_SLOTS = {
@@ -211,7 +211,7 @@ public final class ResourceSynthesizer extends AbstractMachine implements Recipe
             inv.consumeItem(INPUT_SLOT2, 1);
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aResource Synthesized!"));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a資源已合成!"));
             }
             return true;
 
