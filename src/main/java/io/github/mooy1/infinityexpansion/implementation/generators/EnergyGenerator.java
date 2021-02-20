@@ -15,6 +15,7 @@ import io.github.mooy1.infinitylib.presets.MenuPreset;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
+import lombok.AllArgsConstructor;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
@@ -40,12 +41,10 @@ import java.util.Objects;
  *
  * @author Mooy1
  *
- * Thanks to
- * @author J3fftw1
- * for some stuff to work off of
+ * Thanks to panda for some stuff to work off of
  */
 public final class EnergyGenerator extends AbstractGenerator {
-
+    
     public static void setup(InfinityExpansion plugin) {
         new EnergyGenerator(Categories.BASIC_MACHINES, HYDRO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SmelteryItem.MAGSTEEL, MachineItem.MACHINE_CIRCUIT, SmelteryItem.MAGSTEEL,
@@ -62,12 +61,12 @@ public final class EnergyGenerator extends AbstractGenerator {
                 MachineItem.MAGSTEEL_PLATE, MachineItem.MAGSTEEL_PLATE, MachineItem.MAGSTEEL_PLATE,
                 SlimefunItems.LAVA_GENERATOR_2, SlimefunItems.LAVA_GENERATOR_2, SlimefunItems.LAVA_GENERATOR_2,
                 MachineItem.MACHINE_CIRCUIT, MachineItem.MACHINE_CORE, MachineItem.MACHINE_CIRCUIT
-        }, 45, Type.GEOTHERMAL).register(plugin);
+        }, 36, Type.GEOTHERMAL).register(plugin);
         new EnergyGenerator(Categories.ADVANCED_MACHINES, REINFORCED_GEOTHERMAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 GEOTHERMAL, MachineItem.MACHINE_CIRCUIT, GEOTHERMAL,
                 MachineItem.MACHINE_PLATE, MachineItem.MACHINE_CORE, MachineItem.MACHINE_PLATE,
                 GEOTHERMAL, MachineItem.MACHINE_CIRCUIT, GEOTHERMAL
-        }, 225, Type.GEOTHERMAL).register(plugin);
+        }, 180, Type.GEOTHERMAL).register(plugin);
 
         new EnergyGenerator(Categories.BASIC_MACHINES, BASIC_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SmelteryItem.MAGSTEEL, MachineItem.MAGSTEEL_PLATE, SmelteryItem.MAGSTEEL,
@@ -78,18 +77,18 @@ public final class EnergyGenerator extends AbstractGenerator {
                 BASIC_PANEL, BASIC_PANEL, BASIC_PANEL,
                 SmelteryItem.TITANIUM, SlimefunItems.SOLAR_GENERATOR_4, SmelteryItem.TITANIUM,
                 MachineItem.MACHINE_CIRCUIT, MachineItem.MACHINE_CIRCUIT, MachineItem.MACHINE_CIRCUIT
-        }, 180, Type.SOLAR).register(plugin);
+        }, 150, Type.SOLAR).register(plugin);
 
         new EnergyGenerator(Categories.ADVANCED_MACHINES, CELESTIAL_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 MachineItem.MACHINE_PLATE, MachineItem.MACHINE_PLATE, MachineItem.MACHINE_PLATE,
                 ADVANCED_PANEL, ADVANCED_PANEL, ADVANCED_PANEL,
                 MachineItem.MACHINE_CIRCUIT, MachineItem.MACHINE_CORE, MachineItem.MACHINE_CIRCUIT
-        }, 750, Type.SOLAR).register(plugin);
+        }, 500, Type.SOLAR).register(plugin);
         new EnergyGenerator(Categories.ADVANCED_MACHINES, VOID_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 CompressedItem.VOID_INGOT, CompressedItem.VOID_INGOT, CompressedItem.VOID_INGOT,
                 CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL,
                 SmelteryItem.MAGNONIUM, SmelteryItem.MAGNONIUM, SmelteryItem.MAGNONIUM
-        }, 3600, Type.LUNAR).register(plugin);
+        }, 2400, Type.LUNAR).register(plugin);
 
         new EnergyGenerator(Categories.INFINITY_CHEAT, INFINITE_PANEL, InfinityWorkbench.TYPE, new ItemStack[] {
                 EnergyGenerator.CELESTIAL_PANEL, EnergyGenerator.CELESTIAL_PANEL, EnergyGenerator.CELESTIAL_PANEL, EnergyGenerator.CELESTIAL_PANEL, EnergyGenerator.CELESTIAL_PANEL, EnergyGenerator.CELESTIAL_PANEL,
@@ -98,7 +97,7 @@ public final class EnergyGenerator extends AbstractGenerator {
                 SmelteryItem.INFINITY, InfinityItem.CIRCUIT, InfinityItem.CORE, InfinityItem.CORE, InfinityItem.CIRCUIT, SmelteryItem.INFINITY,
                 SmelteryItem.INFINITY, SmelteryItem.INFINITY, SmelteryItem.INFINITY, SmelteryItem.INFINITY, SmelteryItem.INFINITY, SmelteryItem.INFINITY,
                 EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL
-        }, 75000, Type.INFINITY).register(plugin);
+        }, 50000, Type.INFINITY).register(plugin);
     }
     
     public static final SlimefunItemStack HYDRO = new SlimefunItemStack(
@@ -126,8 +125,8 @@ public final class EnergyGenerator extends AbstractGenerator {
             "&c地熱發電機",
             "&7從世界的熱能中產生能量",
             "",
-            LorePreset.energyBuffer(4500),
-            LorePreset.energyPerSecond(45)
+            LorePreset.energyBuffer(3600),
+            LorePreset.energyPerSecond(36)
     );
     public static final SlimefunItemStack REINFORCED_GEOTHERMAL = new SlimefunItemStack(
             "REINFORCED_GEOTHERMAL_GENERATOR",
@@ -136,8 +135,8 @@ public final class EnergyGenerator extends AbstractGenerator {
             "&7產生更多的能量",
             "&7從世界的熱能中",
             "",
-            LorePreset.energyBuffer(22500),
-            LorePreset.energyPerSecond(225)
+            LorePreset.energyBuffer(18000),
+            LorePreset.energyPerSecond(180)
     );
     public static final SlimefunItemStack BASIC_PANEL = new SlimefunItemStack(
             "BASIC_PANEL",
@@ -154,8 +153,8 @@ public final class EnergyGenerator extends AbstractGenerator {
             "&c高級太陽能板",
             "&7從太陽產生能量",
             "",
-            LorePreset.energyBuffer(18000),
-            LorePreset.energyPerSecond(180)
+            LorePreset.energyBuffer(15000),
+            LorePreset.energyPerSecond(150)
     );
     public static final SlimefunItemStack CELESTIAL_PANEL = new SlimefunItemStack(
             "CELESTIAL_PANEL",
@@ -163,8 +162,8 @@ public final class EnergyGenerator extends AbstractGenerator {
             "&e天體面板",
             "&7從太陽產生能量",
             "",
-            LorePreset.energyBuffer(75000),
-            LorePreset.energyPerSecond(750)
+            LorePreset.energyBuffer(50000),
+            LorePreset.energyPerSecond(500)
     );
     public static final SlimefunItemStack VOID_PANEL = new SlimefunItemStack(
             "VOID_PANEL",
@@ -172,8 +171,8 @@ public final class EnergyGenerator extends AbstractGenerator {
             "&8虛空面板",
             "&7從黑暗中產生能量",
             "",
-            LorePreset.energyBuffer(360000),
-            LorePreset.energyPerSecond(3600)
+            LorePreset.energyBuffer(240000),
+            LorePreset.energyPerSecond(2400)
     );
     public static final SlimefunItemStack INFINITE_PANEL = new SlimefunItemStack(
             "INFINITE_PANEL",
@@ -181,8 +180,8 @@ public final class EnergyGenerator extends AbstractGenerator {
             "&b無限面板",
             "&7從宇宙中產生能量",
             "",
-            LorePreset.energyBuffer(7500000),
-            LorePreset.energyPerSecond(75000)
+            LorePreset.energyBuffer(5000000),
+            LorePreset.energyPerSecond(50000)
     );
 
     private final Type type;
@@ -310,6 +309,7 @@ public final class EnergyGenerator extends AbstractGenerator {
         return 4;
     }
 
+    @AllArgsConstructor
     private enum Type {
         WATER("水力發電", false),
         GEOTHERMAL("地熱", false),
@@ -321,11 +321,6 @@ public final class EnergyGenerator extends AbstractGenerator {
         
         private final String status;
         private final boolean more;
-        
-        Type(String status, boolean more) {
-            this.status = status;
-            this.more = more;
-        }
         
     }
 
