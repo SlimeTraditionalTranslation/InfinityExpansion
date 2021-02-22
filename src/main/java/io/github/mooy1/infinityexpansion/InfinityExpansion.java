@@ -12,6 +12,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;
+import java.util.logging.Level;
 
 public class InfinityExpansion extends JavaPlugin implements SlimefunAddon {
 
@@ -19,7 +20,7 @@ public class InfinityExpansion extends JavaPlugin implements SlimefunAddon {
     private static InfinityExpansion instance;
     @Getter
     private static double difficulty = 1;
-
+    
     @Override
     public void onEnable() {
         instance = this;
@@ -30,16 +31,30 @@ public class InfinityExpansion extends JavaPlugin implements SlimefunAddon {
                 new GiveRecipe()
         );
         
+        //Metrics metrics = PluginUtils.setupMetrics(8991);
+
         loadDifficulty();
         
-        //Metrics metrics = PluginUtils.setupMetrics(8991);
-        
         //metrics.addCustomChart(new Metrics.SimplePie("difficulty", () -> String.valueOf(difficulty)));
+        
+        boolean lXInstalled = getServer().getPluginManager().getPlugin("LiteXpansion") != null;
+        
+        if (lXInstalled) {
+            PluginUtils.runSync(() -> PluginUtils.log(Level.WARNING,
+                    "############################################",
+                    "LiteXpansion 對此插件上的一些物品進行了削弱(nerfs),",
+                    " 以及Slimefun的一些物品.",
+                    "如果你不希望有這些削弱, 則需要刪除LiteXpansion.",
+                    "任何由此引起的投訴應提交給LiteXpansion.",
+                    "############################################"
+            ));
+        }
+        
+        //metrics.addCustomChart(new Metrics.SimplePie("litexpansion_installed", () -> String.valueOf(lXInstalled)));
         
         Setup.setup(this);
         
         PluginUtils.startTicker(() -> {});
-
     }
     
     private void loadDifficulty() {

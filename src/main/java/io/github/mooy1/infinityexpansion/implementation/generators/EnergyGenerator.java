@@ -97,7 +97,7 @@ public final class EnergyGenerator extends AbstractGenerator {
                 SmelteryItem.INFINITY, InfinityItem.CIRCUIT, InfinityItem.CORE, InfinityItem.CORE, InfinityItem.CIRCUIT, SmelteryItem.INFINITY,
                 SmelteryItem.INFINITY, SmelteryItem.INFINITY, SmelteryItem.INFINITY, SmelteryItem.INFINITY, SmelteryItem.INFINITY, SmelteryItem.INFINITY,
                 EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL, EnergyGenerator.VOID_PANEL
-        }, 75000, Type.INFINITY).register(plugin);
+        }, 60000, Type.INFINITY).register(plugin);
     }
     
     public static final SlimefunItemStack HYDRO = new SlimefunItemStack(
@@ -180,15 +180,15 @@ public final class EnergyGenerator extends AbstractGenerator {
             "&b無限面板",
             "&7從宇宙中產生能量",
             "",
-            LorePreset.energyBuffer(7500000),
-            LorePreset.energyPerSecond(75000)
+            LorePreset.energyBuffer(6000000),
+            LorePreset.energyPerSecond(60000)
     );
 
     private final Type type;
     private final int generation;
     private final int storage;
 
-    private EnergyGenerator(Category category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, int generation, Type type) {
+    private EnergyGenerator(Category category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, final int generation, Type type) {
         super(category, item, recipeType, recipe);
         this.type = type;
         this.generation = generation;
