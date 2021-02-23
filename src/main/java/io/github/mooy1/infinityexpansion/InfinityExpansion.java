@@ -41,12 +41,13 @@ public class InfinityExpansion extends JavaPlugin implements SlimefunAddon {
         
         if (lXInstalled) {
             PluginUtils.runSync(() -> PluginUtils.log(Level.WARNING,
-                    "############################################",
+                    "###################################################################################",
                     "LiteXpansion 對此插件上的一些物品進行了削弱(nerfs),",
-                    " 以及Slimefun的一些物品.",
+                    "特別是太陽能板, 以及Slimefun的一些物品.",
                     "如果你不希望有這些削弱, 則需要刪除LiteXpansion.",
+                    "如果你想繼續保留LiteXpansion, 請寫一個建議它們添加配置選項.",
                     "任何由此引起的投訴應提交給LiteXpansion.",
-                    "############################################"
+                    "###################################################################################"
             ));
         }
         
