@@ -1,8 +1,7 @@
 package io.github.mooy1.infinityexpansion.implementation.blocks;
 
 import io.github.mooy1.infinityexpansion.implementation.abstracts.AbstractEnergyCrafter;
-import io.github.mooy1.infinityexpansion.implementation.materials.CompressedItem;
-import io.github.mooy1.infinityexpansion.implementation.materials.MachineItem;
+import io.github.mooy1.infinityexpansion.implementation.materials.Items;
 import io.github.mooy1.infinityexpansion.setup.categories.Categories;
 import io.github.mooy1.infinityexpansion.setup.categories.InfinityCategory;
 import io.github.mooy1.infinityexpansion.utils.Util;
@@ -68,19 +67,17 @@ public final class InfinityWorkbench extends AbstractEnergyCrafter {
     public static final List<String> IDS = new ArrayList<>();
     
     public static final RecipeType TYPE = new RecipeType(PluginUtils.getKey("infinity_forge"), ITEM, (stacks, stack) -> {
-        if (stacks.length == 36 && stack instanceof SlimefunItemStack) {
-            SlimefunItemStack item = (SlimefunItemStack) stack;
-            RECIPES.put(stacks, item);
-            ITEMS.put(item.getItemId(), new Pair<>(item, stacks));
-            IDS.add(item.getItemId());
-        }
+        SlimefunItemStack item = (SlimefunItemStack) stack;
+        RECIPES.put(stacks, item);
+        ITEMS.put(item.getItemId(), new Pair<>(item, stacks));
+        IDS.add(item.getItemId());
     }, "", "&c使用無限配方目錄來查看正確的配方!");
     
     public InfinityWorkbench() {
         super(Categories.MAIN_MATERIALS, ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-            CompressedItem.VOID_INGOT, MachineItem.MACHINE_PLATE, CompressedItem.VOID_INGOT,
+            Items.VOID_INGOT, Items.MACHINE_PLATE, Items.VOID_INGOT,
                 SlimefunItems.ENERGIZED_CAPACITOR, new ItemStack(Material.CRAFTING_TABLE), SlimefunItems.ENERGIZED_CAPACITOR,
-                CompressedItem.VOID_INGOT, MachineItem.MACHINE_PLATE, CompressedItem.VOID_INGOT
+                Items.VOID_INGOT, Items.MACHINE_PLATE, Items.VOID_INGOT
         }, ENERGY, STATUS_SLOT);
 
         registerBlockHandler(getId(), (p, b, stack, reason) -> {
