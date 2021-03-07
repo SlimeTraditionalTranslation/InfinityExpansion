@@ -137,7 +137,12 @@ public final class SingularityConstructor extends AbstractMachine implements Rec
     @Override
     protected boolean process(@Nonnull BlockMenu menu, @Nonnull Block b, @Nonnull Config data) {
         ItemStack input = menu.getItemInSlot(INPUT_SLOT);
-        String inputID = StackUtils.getIDorTypeOfNullable(input);
+        String  inputID;
+        if (input == null) {
+            inputID = null;
+        } else {
+            inputID = StackUtils.getIDorType(input);
+        }
 
         // load data
         Integer progressID = getProgressID(b);
@@ -247,7 +252,7 @@ public final class SingularityConstructor extends AbstractMachine implements Rec
     private static void invalidInput(BlockMenu menu) {
         menu.replaceExistingItem(STATUS_SLOT, new CustomItem(
                 Material.RED_STAINED_GLASS_PANE,
-                "&cInput a valid material to start"
+                "&c放入有效的材料來開始"
         ));
     }
     
