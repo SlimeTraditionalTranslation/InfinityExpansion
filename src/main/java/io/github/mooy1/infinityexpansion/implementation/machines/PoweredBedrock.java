@@ -32,7 +32,7 @@ public final class PoweredBedrock extends SlimefunItem implements EnergyNetCompo
             Material.NETHERITE_BLOCK,
             "&4電動基岩",
             "&7當通電時, 將會轉化成基岩",
-            "&7斷掉或損壞後還原",
+            "&7斷電或破壞後還原",
             "",
             LorePreset.energyPerSecond(PoweredBedrock.ENERGY)
     );
