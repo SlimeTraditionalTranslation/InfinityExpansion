@@ -1,10 +1,10 @@
-package io.github.mooy1.infinityexpansion.implementation.blocks;
+package io.github.mooy1.infinityexpansion.implementation.storage;
 
-import io.github.mooy1.infinityexpansion.implementation.materials.Items;
+import io.github.mooy1.infinityexpansion.InfinityExpansion;
+import io.github.mooy1.infinityexpansion.implementation.Categories;
 import io.github.mooy1.infinityexpansion.implementation.abstracts.AbstractCrafter;
-import io.github.mooy1.infinityexpansion.categories.Categories;
-import io.github.mooy1.infinitylib.delayed.DelayedRecipeType;
-import io.github.mooy1.infinitylib.player.MessageUtils;
+import io.github.mooy1.infinityexpansion.implementation.materials.Items;
+import io.github.mooy1.infinitylib.slimefun.utils.DelayedRecipeType;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
@@ -27,14 +27,14 @@ public final class StorageForge extends AbstractCrafter {
             "STORAGE_FORGE",
             Material.BEEHIVE,
             "&6儲存鍛造",
-            "&7升級儲存單元",
+            "&7升級儲存單元的等級",
             "&7保留儲存的物品"
     );
     
-    public static final DelayedRecipeType TYPE = new DelayedRecipeType(ITEM);
+    public static final DelayedRecipeType TYPE = new DelayedRecipeType(InfinityExpansion.inst(), ITEM);
     
     public StorageForge() {
-        super(Categories.STORAGE_TRANSPORT, ITEM, TYPE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        super(Categories.STORAGE, ITEM, TYPE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 Items.MAGSTEEL, new ItemStack(Material.ANVIL), Items.MAGSTEEL,
                 Items.MAGSTEEL, new ItemStack(Material.CRAFTING_TABLE), Items.MAGSTEEL,
                 Items.MAGSTEEL, new ItemStack(Material.BARREL), Items.MAGSTEEL,
@@ -48,7 +48,7 @@ public final class StorageForge extends AbstractCrafter {
 
     @Override
     public void postCraft(@Nonnull Location l, @Nonnull BlockMenu inv, @Nonnull Player p) {
-        MessageUtils.message(p, ChatColor.GREEN + "將物品轉移至升級的單元");
+        p.sendMessage(ChatColor.GREEN + "將物品轉移至升級的單元");
     }
     
 }
