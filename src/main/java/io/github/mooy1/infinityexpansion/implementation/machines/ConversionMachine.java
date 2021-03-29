@@ -246,7 +246,7 @@ public final class ConversionMachine extends AbstractMachine implements RecipeDi
             inv.consumeItem(INPUT_SLOTS[0], output.getInputConsumption());
             inv.pushItem(output.getOutput().clone(), OUTPUT_SLOTS);
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&aConverting..."));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItem(Material.LIME_STAINED_GLASS_PANE, "&a轉換中..."));
             }
             return true;
         } else if (inv.hasViewer()) {
