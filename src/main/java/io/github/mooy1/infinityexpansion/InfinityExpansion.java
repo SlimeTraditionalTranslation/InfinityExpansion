@@ -1,16 +1,15 @@
 package io.github.mooy1.infinityexpansion;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.logging.Level;
+
 import io.github.mooy1.infinityexpansion.commands.GiveRecipe;
 import io.github.mooy1.infinityexpansion.commands.PrintItem;
 import io.github.mooy1.infinityexpansion.commands.SetData;
 import io.github.mooy1.infinitylib.AbstractAddon;
 //import io.github.mooy1.infinitylib.bstats.bukkit.Metrics;
 import io.github.mooy1.infinitylib.commands.AbstractCommand;
-import lombok.Getter;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.logging.Level;
 
 public final class InfinityExpansion extends AbstractAddon {
     
@@ -20,41 +19,28 @@ public final class InfinityExpansion extends AbstractAddon {
         return instance;
     }
     
-    @Getter
-    private double difficulty = 1;
-    
     @Override
     public void onEnable() {
-        super.onEnable();
         instance = this;
-        
-        loadDifficulty();
-        
-        //getMetrics().addCustomChart(new Metrics.SimplePie("difficulty", () -> String.valueOf(this.difficulty)));
-        
-        boolean lXInstalled = getServer().getPluginManager().getPlugin("LiteXpansion") != null;
-        
-        if (lXInstalled) {
-            runSync(() -> log(Level.WARNING,
-                    "###################################################################################",
-                    "LiteXpansion 對此插件上的一些物品進行了削弱(nerfs),",
-                    "特別是太陽能板, 以及Slimefun的一些物品.",
-                    "如果你不希望有這些削弱, 則需要刪除LiteXpansion.",
-                    "如果你想繼續保留LiteXpansion, 請寫一個建議它們添加配置選項.",
-                    "任何由此引起的投訴應提交給LiteXpansion.",
-                    "###################################################################################"
-            ));
-        }
-        
-        //getMetrics().addCustomChart(new Metrics.SimplePie("litexpansion_installed", () -> String.valueOf(lXInstalled)));
+        super.onEnable();
         
         Setup.setup(this);
+
+        if (getServer().getPluginManager().getPlugin("LiteXpansion") != null) {
+            runSync(() -> log(Level.WARNING,
+                    "########################################################",
+                    "LiteXpansion 削弱(nerfs)此附加的能源發電機.",
+                    "你可以在LiteXpansion的config內關閉此削弱.",
+                    "在 'options:' 增加 'nerf-other-addons: false'",
+                    "########################################################"
+            ));
+        }
     }
 
-    @Override
-    protected int getMetricsID() {
-        return 8991;
-    }
+    //@Override
+    /*protected Metrics setupMetrics() {
+        return new Metrics(this, 8991);
+    }*/
 
     @Override
     protected String getGithubPath() {
@@ -64,21 +50,6 @@ public final class InfinityExpansion extends AbstractAddon {
     @Override
     protected List<AbstractCommand> getSubCommands() {
         return Arrays.asList(new GiveRecipe(), new SetData(), new PrintItem());        
-    }
-
-    private void loadDifficulty() {
-        double val = getConfig().getDouble("balance-options.difficulty");
-        // round to .1 .2 .3 or 1 2 3 etc
-        if (val >= .1 && val < 1) {
-            this.difficulty = ((int) (val * 10)) / 10D;
-        } else if (val >= 1 && val <= 10) {
-            this.difficulty = (int) val;
-        } else {
-            this.difficulty = 1;
-            getConfig().set("balance-options.difficulty", 1);
-            log(Level.WARNING, "Difficulty value was out of bounds, resetting to default!");
-            saveConfig();
-        }
     }
 
     @Override

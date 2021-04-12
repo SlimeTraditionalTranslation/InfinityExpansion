@@ -1,5 +1,16 @@
 package io.github.mooy1.infinityexpansion.implementation.mobdata;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
 import io.github.mooy1.infinityexpansion.categories.Categories;
 import io.github.mooy1.infinityexpansion.implementation.materials.EnderEssence;
@@ -11,15 +22,6 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.cscorelib2.collections.Pair;
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 
 /**
  * A mob data card which will be able to be used in the {@link MobSimulationChamber}
@@ -180,7 +182,7 @@ public final class MobDataCard extends SlimefunItem implements RecipeDisplayItem
                 SlimefunItems.INFUSED_ELYTRA, EmptyDataCard.ITEM, new ItemStack(Material.DRAGON_HEAD, 1),
                 new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3, 64), new SlimefunItemStack(Items.VOID_INGOT, 32), new ItemStack(Material.DRAGON_BREATH, 64)
         }, Items.VOID_DUST, 1, EnderEssence.ITEM, 4, new ItemStack(Material.DRAGON_EGG), 4_000_000).register(plugin);
-        new MobDataCard("Bee", MobDataTier.NEUTRAL, new ItemStack[] {
+        new MobDataCard("蜜蜂", MobDataTier.NEUTRAL, new ItemStack[] {
                 new ItemStack(Material.HONEYCOMB_BLOCK, 16), new ItemStack(Material.HONEY_BLOCK, 16),new ItemStack(Material.HONEYCOMB_BLOCK, 16),
                 new ItemStack(Material.HONEY_BLOCK, 16), EmptyDataCard.ITEM,  new ItemStack(Material.HONEY_BLOCK, 16),
                 new ItemStack(Material.HONEYCOMB_BLOCK, 16), new ItemStack(Material.HONEY_BLOCK, 16),new ItemStack(Material.HONEYCOMB_BLOCK, 16)
