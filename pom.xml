@@ -58,7 +58,7 @@
         <dependency>
             <groupId>io.github.xMikux</groupId>
             <artifactId>InfinityLib</artifactId>
-            <version>58c8451</version>
+            <version>ada9d4c</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -67,7 +67,6 @@
         <finalName>${project.name} v${project.version}</finalName>
         <defaultGoal>clean package</defaultGoal>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
-
         <resources>
             <resource>
                 <directory>${basedir}/src/main/resources</directory>

@@ -243,7 +243,7 @@ public final class EnergyGenerator extends AbstractContainer implements EnergyNe
                         Material.GREEN_STAINED_GLASS_PANE,
                         "&a發電",
                         "&7類型: &6" + type.status,
-                        "&7產生中: &6" + LorePreset.roundHundreds(gen * TickerUtils.TPS) + " J/s ",
+                        "&7發電中: &6" + LorePreset.format(gen * TickerUtils.TPS) + " J/s ",
                         "&7已儲存: &6" + LorePreset.format(getCharge(l)) + " J"
                 ));
             }
