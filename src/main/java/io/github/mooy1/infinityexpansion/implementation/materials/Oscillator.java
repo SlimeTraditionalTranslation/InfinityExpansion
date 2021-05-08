@@ -32,7 +32,7 @@ public final class Oscillator extends SlimefunItem {
                 material, 
                 "&b" + StackUtils.getInternalName(new ItemStack(material)) + " 振盪器",
                 "&7放置在採石場來增加",
-                "&7開採這種材料機率為50%"
+                "&750%的機率採此材料"
         ), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MACHINE_PLATE, SlimefunItems.BLISTERING_INGOT_3, Materials.MACHINE_PLATE,
                 SlimefunItems.BLISTERING_INGOT_3, new ItemStack(material), SlimefunItems.BLISTERING_INGOT_3,
