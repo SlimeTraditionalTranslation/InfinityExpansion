@@ -1,31 +1,17 @@
 package io.github.mooy1.infinityexpansion.implementation.mobdata;
 
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
+import lombok.experimental.UtilityClass;
 
-import io.github.mooy1.infinityexpansion.categories.Categories;
-import io.github.mooy1.infinityexpansion.implementation.materials.Items;
-import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 
-public final class EmptyDataCard extends SlimefunItem implements NotPlaceable {
+@Deprecated
+@UtilityClass
+public final class EmptyDataCard {
 
-    public static final SlimefunItemStack ITEM = new SlimefunItemStack(
-            "EMPTY_DATA_CARD",
-            Material.CHAINMAIL_CHESTPLATE,
-            "&8空資料卡",
-            "&7注入怪物的物品以填補"
-    );
-    
-    public EmptyDataCard() {
-        super(Categories.MOB_SIMULATION, ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                SlimefunItems.MAGNESIUM_INGOT, Items.MACHINE_CIRCUIT, SlimefunItems.MAGNESIUM_INGOT,
-                SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_EMERALD,
-                SlimefunItems.MAGNESIUM_INGOT, Items.MACHINE_CIRCUIT, SlimefunItems.MAGNESIUM_INGOT
-        });
-    }
+    /**
+     * Use {@code MobData.EMPTY_DATA_CARD} instead
+     */
+    @Deprecated
+    public static final SlimefunItemStack ITEM = MobData.EMPTY_DATA_CARD;
     
 }

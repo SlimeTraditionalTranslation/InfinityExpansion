@@ -9,7 +9,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
-
 import javax.annotation.Nullable;
 
 import org.bukkit.Bukkit;
@@ -36,14 +35,12 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
-import io.github.mooy1.infinityexpansion.categories.Categories;
-import io.github.mooy1.infinityexpansion.implementation.materials.Items;
 import io.github.mooy1.infinitylib.items.StackUtils;
 import io.github.mooy1.infinitylib.players.CoolDownMap;
 import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.magical.runes.SoulboundRune;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
+import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
@@ -56,12 +53,6 @@ import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
  */
 public final class VeinMinerRune extends SlimefunItem implements Listener, NotPlaceable {
     
-    public static final SlimefunItemStack ITEM = new SlimefunItemStack(
-            "VEIN_MINER_RUNE",
-            Material.DIAMOND,
-            "&b礦脈礦工符文",
-            "&7升級工具來連鎖挖一些材料"
-    );
     private static final String[] ALLOWED = {
             "_ORE", "_LOG", "_WOOD", "GILDED", "SOUL", "GRAVEL",
             "MAGMA", "OBSIDIAN", "DIORITE", "ANDESITE", "GRANITE", "_LEAVES",
@@ -72,15 +63,11 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
     private static final String LORE = ChatColor.AQUA + "礦脈礦工 - 使用時蹲下";
     private static final NamespacedKey key = InfinityExpansion.inst().getKey("vein_miner");
     
-    private final CoolDownMap cooldowns = new CoolDownMap(InfinityExpansion.inst());
+    private final CoolDownMap cooldowns = new CoolDownMap();
     private final Set<Block> processing = new HashSet<>();
     
-    public VeinMinerRune() {
-        super(Categories.MAIN_MATERIALS, ITEM, RecipeType.MAGIC_WORKBENCH, new ItemStack[] {
-                Items.MAGSTEEL, SlimefunItems.PICKAXE_OF_VEIN_MINING, Items.MAGSTEEL,
-                new ItemStack(Material.REDSTONE_ORE), SlimefunItems.BLANK_RUNE, new ItemStack(Material.LAPIS_ORE),
-                Items.MAGSTEEL, SlimefunItems.MAGIC_LUMP_3, Items.MAGSTEEL,
-        });
+    public VeinMinerRune(Category category, SlimefunItemStack item, RecipeType type, ItemStack[] recipe) {
+        super(category, item, type, recipe);
         InfinityExpansion.inst().registerListener(this);
     }
     
