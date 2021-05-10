@@ -37,9 +37,16 @@ https://github.com/Mooy1/InfinityExpansion/wiki/How-to-make-a-Slimefun-Server
 ## 更新日誌
 
 Dev 104 - Added quarry oscillators, witch and villager data card, and fixed a bunch of bugs.
+
 Dev 105 - Fixed small issues with 104.
+
 Dev 106 - Fixed ores generating in high tier quarries.
+
 Dev 107 - Fixed storage units and some recipes
+
+Dev 108 - Added infinity dust extractor, ingot former, infinity ingot former, infinity cobble gen, and fixed storage withdraw overstacking
+
+Dev 109 - Fixed gold dust dupe and added quartz oscillator
 
 ## 材質包
 為該附加提供大多數物品的材質, 需要使用Optifine才能運作:
