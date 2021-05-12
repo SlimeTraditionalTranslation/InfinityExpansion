@@ -48,6 +48,8 @@ Dev 108 - Added infinity dust extractor, ingot former, infinity ingot former, in
 
 Dev 109 - Fixed gold dust dupe and added quartz oscillator
 
+Dev 110 - Fixed infinity cobble gen, optimized storage units
+
 ## 材質包
 為該附加提供大多數物品的材質, 需要使用Optifine才能運作:
 
