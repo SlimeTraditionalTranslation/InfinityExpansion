@@ -50,6 +50,8 @@ Dev 109 - Fixed gold dust dupe and added quartz oscillator
 
 Dev 110 - Fixed infinity cobble gen, optimized storage units
 
+Dev 111 - Fix auto update thing and temp fix for unit error
+
 ## 材質包
 為該附加提供大多數物品的材質, 需要使用Optifine才能運作:
 
