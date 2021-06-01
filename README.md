@@ -19,14 +19,16 @@
   <a href="https://discord.gg/slimefun">
     <img src="https://discordapp.com/api/guilds/565557184348422174/widget.png?style=banner3" alt="Discord Invite"/>
   </a>
+  <a href="https://discord.gg/SqD3gg5SAU">
+    <img src="https://discordapp.com/api/guilds/809178621424041997/widget.png?style=banner3" alt="Discord Invite"/>
+  </a>
 </p>
 
 ## 需求
-Minecraft 版本: 1.16+ (建議使用Paper伺服器核心)
 
-Slimefun Version: DEV 900+
+Minecraft 版本: 1.16+ (推薦使用Paper伺服器核心)
 
-Slimefun 版本: DEV 786+
+Slimefun 版本: DEV 925+
 
 [![Build Status](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/Slimefun4/master/badge.svg)](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/Slimefun4/master/)
 
@@ -34,27 +36,23 @@ Slimefun 版本: DEV 786+
 
 https://github.com/Mooy1/InfinityExpansion/wiki/How-to-make-a-Slimefun-Server
 
-## 更新日誌
-
-Dev 104 - Added quarry oscillators, witch and villager data card, and fixed a bunch of bugs.
-
-Dev 105 - Fixed small issues with 104.
-
-Dev 106 - Fixed ores generating in high tier quarries.
-
-Dev 107 - Fixed storage units and some recipes
-
-Dev 108 - Added infinity dust extractor, ingot former, infinity ingot former, infinity cobble gen, and fixed storage withdraw overstacking
-
-Dev 109 - Fixed gold dust dupe and added quartz oscillator
-
-Dev 110 - Fixed infinity cobble gen, optimized storage units
-
-Dev 111 - Fix auto update thing and temp fix for unit error
-
-Dev 112 - Fix for latest dev, Requires dev 925!
-
 ## 材質包
 為該附加提供大多數物品的材質, 需要使用Optifine才能運作:
 
 https://github.com/Mooy1/InfinityExpansion/releases/tag/v1
+
+## 更新日誌
+
+| 版本 | 變化     |
+| --------| ----------- |
+| 104 | Added Quarry oscillators, witch and villager data card, and fixed a bunch of bugs. |
+| 105 | Fixed small issues with 104. |
+| 106 | Fixed ores generating in high tier quarries. |
+| 107 | Fixed storage units and some recipes |
+| 108 | Added infinity dust extractor, ingot former, infinity ingot former, infinity cobble gen, and fixed storage withdraw overstacking |
+| 109 | Fixed gold dust dupe and added quartz oscillator |
+| 110 | Fixed infinity cobble gen, optimized storage units |
+| 111 | Fix auto update thing and temp fix for unit error |
+| 112 | Fix for latest dev, Requires dev 925! |
+| 113 | Fix future issues on startup |
+| 114 | Added cobble press, advanced smeltery, Attempt to fix Storage Units, Fix config stuff, if you are on Dev 95 or lower, update to Dev 111 before this. |

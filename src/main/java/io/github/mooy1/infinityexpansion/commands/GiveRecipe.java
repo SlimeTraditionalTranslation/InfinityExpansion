@@ -2,6 +2,7 @@ package io.github.mooy1.infinityexpansion.commands;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.annotation.Nonnull;
 
 import org.bukkit.ChatColor;
@@ -58,6 +59,9 @@ public final class GiveRecipe extends AbstractCommand {
         if (args.length == 2) {
             for (SlimefunItem item : SlimefunPlugin.getRegistry().getEnabledSlimefunItems()) {
                 tabs.add(item.getId());
+                if (tabs.size() > 64) {
+                    break;
+                }
             } 
         }
     }

@@ -3,8 +3,8 @@ package io.github.mooy1.infinityexpansion.categories;
 import org.bukkit.Material;
 
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
-import io.github.mooy1.infinitylib.slimefun.utils.MultiCategory;
-import io.github.mooy1.infinitylib.slimefun.utils.SubCategory;
+import io.github.mooy1.infinitylib.categories.MultiCategory;
+import io.github.mooy1.infinitylib.categories.SubCategory;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
 
@@ -18,7 +18,7 @@ public final class Categories {
     public static final Category INFINITY_CATEGORY = new InfinityCategory(InfinityExpansion.inst().getKey("infinity_recipes"),
             new CustomItem(Material.RESPAWN_ANCHOR, "&b無限&7配方"), 3
     );
-    public static final Category MAIN_MATERIALS = new SubCategory(InfinityExpansion.inst().getKey("main_materials"), 
+    public static final Category MAIN_MATERIALS = new SubCategory(InfinityExpansion.inst().getKey("main_materials"),
             new CustomItem(Material.NETHER_STAR, "&b無限&7材料")
     );
     public static final Category BASIC_MACHINES = new SubCategory(InfinityExpansion.inst().getKey("basic_machines"),
