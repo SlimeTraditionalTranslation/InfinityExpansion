@@ -63,7 +63,7 @@ public final class InfinityExpansion extends AbstractAddon {
     @Nonnull
     @Override
     protected String getGithubPath() {
-        return "xMikux/InfinityExpansion/master";
+        return "SlimeTraditionalTranslation/InfinityExpansion/master";
     }
 
     @Nonnull

@@ -5,10 +5,10 @@
 [原作者連結](https://github.com/Mooy1/InfinityExpansion)
 
 ## 下載
-非官方繁體中文版: https://xmikux.github.io/builds/xMikux/InfinityExpansion/master/ <br>
+非官方繁體中文版: https://xmikux.github.io/builds/SlimeTraditionalTranslation/InfinityExpansion/master/ <br>
 官方構鍵: https://thebusybiscuit.github.io/builds/Mooy1/InfinityExpansion/master/
 
-[![Build Status](https://xmikux.github.io/builds/xMikux/InfinityExpansion/master/badge.svg)](https://xmikux.github.io/builds/xMikux/InfinityExpansion/master)
+[![Build Status](https://xmikux.github.io/builds/SlimeTraditionalTranslation/InfinityExpansion/master/badge.svg)](https://xmikux.github.io/builds/SlimeTraditionalTranslation/InfinityExpansion/master)
 
 
 ## 錯誤/建議

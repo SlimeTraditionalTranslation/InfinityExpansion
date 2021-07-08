@@ -52,7 +52,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>io.github.xMikux</groupId>
+            <groupId>io.github.SlimeTraditionalTranslation</groupId>
             <artifactId>InfinityLib</artifactId>
             <version>bd732a4</version>
             <scope>compile</scope>
