@@ -4,4 +4,4 @@ rules:
     upstream: Mooy1:master
     mergeMethod: merge
     conflictReviewers:
-      - xMikux
+      - SlimeTraditionalTranslation/Translate-Maintainer
