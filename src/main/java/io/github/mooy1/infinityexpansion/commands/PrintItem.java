@@ -15,7 +15,7 @@ import io.github.mooy1.infinitylib.commands.AbstractCommand;
 public final class PrintItem extends AbstractCommand {
 
     public PrintItem() {
-        super("printitem", "Prints the internal data of an item for debugging purposes", true);
+        super("printitem", "顯示該物品的內部資料來進行除錯目的", true);
     }
 
     @Override
@@ -27,18 +27,18 @@ public final class PrintItem extends AbstractCommand {
         Player p = (Player) commandSender;
 
         ItemStack item = p.getInventory().getItemInMainHand();
-        
+
         if (item.getType() == Material.AIR) {
-            p.sendMessage(ChatColor.RED + "You must be holding an item!");
+            p.sendMessage(ChatColor.RED + "你必須拿著物品!");
             return;
         }
-        
+
         p.sendMessage(item.toString());
     }
 
     @Override
     public void onTab(@Nonnull CommandSender commandSender, @Nonnull String[] strings, @Nonnull List<String> list) {
-        
+
     }
 
 }

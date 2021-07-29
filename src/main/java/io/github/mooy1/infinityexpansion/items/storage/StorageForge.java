@@ -40,5 +40,5 @@ public final class StorageForge extends AbstractCrafter {
     public void postCraft(@Nonnull Location l, @Nonnull BlockMenu inv, @Nonnull Player p) {
         p.sendMessage(ChatColor.GREEN + "將物品轉移至升級的單元");
     }
-    
+
 }
