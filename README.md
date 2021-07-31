@@ -37,7 +37,8 @@ Slimefun 版本: DEV 925+
 https://github.com/Mooy1/InfinityExpansion/wiki/How-to-make-a-Slimefun-Server
 
 ## 材質包
-為該附加提供大多數物品的材質, 需要使用Optifine才能運作:
+
+為此附加某些物品添加材質包 (需要Optifine):
 
 https://github.com/Mooy1/InfinityExpansion/releases/tag/v1
 
@@ -59,3 +60,4 @@ https://github.com/Mooy1/InfinityExpansion/releases/tag/v1
 | 115 | Fixed issue with storage unit display (From PR) |
 | 116 | Add configuration to all quarry resources, added copper (only with 1.17+) |
 | 117 | Fix errors of previous 116 |
+| 118 | Added Config option to enable researches, Improved storage unit signs, Slight nerf to mob data xp |
