@@ -165,9 +165,9 @@ public final class InfinityCategory extends FlexCategory {
                         ChatColor.WHITE + ItemUtils.getItemName(sfItem.getItem()),
                         "&4&l" + SlimefunPlugin.getLocalization().getMessage(player, "guide.locked"),
                         "",
-                        "&a> Click to unlock",
+                        "&a> 點擊解鎖",
                         "",
-                        "&7Cost: &b" + research.getCost() + " Level(s)"
+                        "&7消耗: &b" + research.getCost() + " 經驗等級"
                 );
                 menu.addItem(i, resItem, (p, slot, item1, action) -> {
                     research.unlockFromGuide(GUIDE, p, entry.profile, sfItem, Categories.INFINITY_CATEGORY, 0);
