@@ -1,17 +1,26 @@
 # 無限附加
-此附加添加了非常多的終局遊戲至黏液科技, 增加了 '無限錠' 這需要消耗大量的資源與精力來製作, 並用於製作功能強大的機器與裝備.
+無限附加是Slimefun的附加插件, 它添加了大量新機器與新資源.
+它大大的擴展了Slimefun的終局遊戲. 你可以在頁面底部閱讀最近更新和添加的內容.
 
-此為**非官方**版本, 請勿在該作者的問題追蹤內回報!
-[原作者連結](https://github.com/Mooy1/InfinityExpansion)
+> 此為**非官方**版本, 請勿在該作者問題追蹤內回報! <br>
+> [原作連結](https://github.com/Mooy1/InfinityExpansion) | [非官方Discord](https://discord.gg/GF4CwjFXT9)
 
 ## 下載
-非官方繁體中文版: https://xmikux.github.io/builds/SlimeTraditionalTranslation/InfinityExpansion/master/ <br>
-官方構鍵: https://thebusybiscuit.github.io/builds/Mooy1/InfinityExpansion/master/
+| 非官方繁體中文版 | 官方英文版 |
+| -------- | -------- |
+| 點下方圖片下載 | 點下方圖片下載 |
+| [![Build Status](https://xmikux.github.io/builds/SlimeTraditionalTranslation/InfinityExpansion/master/badge.svg)](https://xmikux.github.io/builds/SlimeTraditionalTranslation/InfinityExpansion/master) | [![Build Status](https://thebusybiscuit.github.io/builds/Mooy1/InfinityExpansion/master/badge.svg)](https://thebusybiscuit.github.io/builds/Mooy1/InfinityExpansion/master) | 
 
-[![Build Status](https://xmikux.github.io/builds/SlimeTraditionalTranslation/InfinityExpansion/master/badge.svg)](https://xmikux.github.io/builds/SlimeTraditionalTranslation/InfinityExpansion/master)
+## 需求
 
+Minecraft 版本: 1.16+ (推薦 Paper)
+
+Slimefun 版本: DEV 950+
+
+[![Build Status](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/Slimefun4/master/badge.svg)](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/Slimefun4/master/)
 
 ## 錯誤/建議
+
 發出新的問題, 合併請求, 或使用Discord聯繫我 @Riley#5911 <br>
 如果使用非官方版本, 請加入 https://discord.gg/GF4CwjFXT9 的非官方Discord翻譯群 並在 #翻譯回報 頻道中討論
 
@@ -24,25 +33,21 @@
   </a>
 </p>
 
-## 需求
-
-Minecraft 版本: 1.16+ (推薦使用Paper伺服器核心)
-
-Slimefun 版本: DEV 950+
-
-[![Build Status](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/Slimefun4/master/badge.svg)](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/Slimefun4/master/)
-
-如果你想製作你自己的本地伺服器, 請查看我的指南:
-
-https://github.com/Mooy1/InfinityExpansion/wiki/How-to-make-a-Slimefun-Server
-
 ## 材質包
 
 為此附加某些物品添加材質包 (需要Optifine):
 
 https://github.com/Mooy1/InfinityExpansion/releases/tag/v1
 
-## 更新日誌
+## 統計
+
+有關於此附加的統計數據, 包括當前伺服器與玩家數量可在此處查看 :
+
+https://bstats.org/plugin/bukkit/InfinityExpansion/8991
+
+## Changelog
+#### Version 120
+- Won't warn about LiteXpansion nerfs if they are disabled
 #### Version 119
 - Fixed void harvester speed issue
 - infinity harvester will be about 6% faster
