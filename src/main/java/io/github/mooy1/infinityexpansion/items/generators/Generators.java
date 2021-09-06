@@ -1,4 +1,4 @@
-package io.github.mooy1.infinityexpansion.items;
+package io.github.mooy1.infinityexpansion.items.generators;
 
 import lombok.experimental.UtilityClass;
 
@@ -6,15 +6,14 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
-import io.github.mooy1.infinityexpansion.categories.Categories;
+import io.github.mooy1.infinityexpansion.categories.Groups;
+import io.github.mooy1.infinityexpansion.items.SlimefunExtension;
 import io.github.mooy1.infinityexpansion.items.blocks.InfinityWorkbench;
-import io.github.mooy1.infinityexpansion.items.generators.EnergyGenerator;
-import io.github.mooy1.infinityexpansion.items.generators.GenerationType;
-import io.github.mooy1.infinityexpansion.items.generators.InfinityReactor;
-import io.github.mooy1.infinitylib.presets.LorePreset;
+import io.github.mooy1.infinityexpansion.items.materials.Materials;
+import io.github.mooy1.infinitylib.machines.MachineLore;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import me.mrCookieSlime.Slimefun.Lists.RecipeType;
-import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 
 @UtilityClass
 public final class Generators {
@@ -37,8 +36,8 @@ public final class Generators {
             "&7通過壓縮發電",
             "&7於&8虛無&7和&b無限&7錠",
             "",
-            LorePreset.energyBuffer(INFINITY_REACTOR_ENERGY * 1000),
-            LorePreset.energyPerSecond(INFINITY_REACTOR_ENERGY)
+            MachineLore.energyBuffer(INFINITY_REACTOR_ENERGY * 1000),
+            MachineLore.energyPerSecond(INFINITY_REACTOR_ENERGY)
     );
     public static final SlimefunItemStack HYDRO = new SlimefunItemStack(
             "HYDRO_GENERATOR",
@@ -46,8 +45,8 @@ public final class Generators {
             "&9水力發電機",
             "&7在流動的水中產生能量",
             "",
-            LorePreset.energyBuffer(HYDRO_ENERGY * 100),
-            LorePreset.energyPerSecond(HYDRO_ENERGY)
+            MachineLore.energyBuffer(HYDRO_ENERGY * 100),
+            MachineLore.energyPerSecond(HYDRO_ENERGY)
     );
     public static final SlimefunItemStack REINFORCED_HYDRO = new SlimefunItemStack(
             "REINFORCED_HYDRO_GENERATOR",
@@ -56,8 +55,8 @@ public final class Generators {
             "&7產生更多的能量",
             "&7從流動的水中",
             "",
-            LorePreset.energyBuffer(ADVANCED_HYDRO_ENERGY * 100),
-            LorePreset.energyPerSecond(ADVANCED_HYDRO_ENERGY)
+            MachineLore.energyBuffer(ADVANCED_HYDRO_ENERGY * 100),
+            MachineLore.energyPerSecond(ADVANCED_HYDRO_ENERGY)
     );
     public static final SlimefunItemStack GEOTHERMAL = new SlimefunItemStack(
             "GEOTHERMAL_GENERATOR",
@@ -65,8 +64,8 @@ public final class Generators {
             "&c地熱發電機",
             "&7從世界的熱能中產生能量",
             "",
-            LorePreset.energyBuffer(GEO_ENERGY * 100),
-            LorePreset.energyPerSecond(GEO_ENERGY)
+            MachineLore.energyBuffer(GEO_ENERGY * 100),
+            MachineLore.energyPerSecond(GEO_ENERGY)
     );
     public static final SlimefunItemStack REINFORCED_GEOTHERMAL = new SlimefunItemStack(
             "REINFORCED_GEOTHERMAL_GENERATOR",
@@ -75,8 +74,8 @@ public final class Generators {
             "&7產生更多的能量",
             "&7從世界的熱能中",
             "",
-            LorePreset.energyBuffer(ADVANCED_GEO_ENERGY * 100),
-            LorePreset.energyPerSecond(ADVANCED_GEO_ENERGY)
+            MachineLore.energyBuffer(ADVANCED_GEO_ENERGY * 100),
+            MachineLore.energyPerSecond(ADVANCED_GEO_ENERGY)
     );
     public static final SlimefunItemStack BASIC_PANEL = new SlimefunItemStack(
             "BASIC_PANEL",
@@ -84,8 +83,8 @@ public final class Generators {
             "&9基本太陽能板",
             "&7從太陽產生能量",
             "",
-            LorePreset.energyBuffer(BASIC_SOLAR_ENERGY * 100),
-            LorePreset.energyPerSecond(BASIC_SOLAR_ENERGY)
+            MachineLore.energyBuffer(BASIC_SOLAR_ENERGY * 100),
+            MachineLore.energyPerSecond(BASIC_SOLAR_ENERGY)
     );
     public static final SlimefunItemStack ADVANCED_PANEL = new SlimefunItemStack(
             "ADVANCED_PANEL",
@@ -93,8 +92,8 @@ public final class Generators {
             "&c高級太陽能板",
             "&7從太陽產生能量",
             "",
-            LorePreset.energyBuffer(ADVANCED_SOLAR_ENERGY * 100),
-            LorePreset.energyPerSecond(ADVANCED_SOLAR_ENERGY)
+            MachineLore.energyBuffer(ADVANCED_SOLAR_ENERGY * 100),
+            MachineLore.energyPerSecond(ADVANCED_SOLAR_ENERGY)
     );
     public static final SlimefunItemStack CELESTIAL_PANEL = new SlimefunItemStack(
             "CELESTIAL_PANEL",
@@ -102,8 +101,8 @@ public final class Generators {
             "&e天體面板",
             "&7從太陽產生能量",
             "",
-            LorePreset.energyBuffer(CELESTIAL_ENERGY * 100),
-            LorePreset.energyPerSecond(CELESTIAL_ENERGY)
+            MachineLore.energyBuffer(CELESTIAL_ENERGY * 100),
+            MachineLore.energyPerSecond(CELESTIAL_ENERGY)
     );
     public static final SlimefunItemStack VOID_PANEL = new SlimefunItemStack(
             "VOID_PANEL",
@@ -111,8 +110,8 @@ public final class Generators {
             "&8虛空面板",
             "&7從黑暗中產生能量",
             "",
-            LorePreset.energyBuffer(VOID_ENERGY * 100),
-            LorePreset.energyPerSecond(VOID_ENERGY)
+            MachineLore.energyBuffer(VOID_ENERGY * 100),
+            MachineLore.energyPerSecond(VOID_ENERGY)
     );
     public static final SlimefunItemStack INFINITE_PANEL = new SlimefunItemStack(
             "INFINITE_PANEL",
@@ -120,12 +119,12 @@ public final class Generators {
             "&b無限面板",
             "&7從宇宙中產生能量",
             "",
-            LorePreset.energyBuffer(INFINITY_ENERGY * 100),
-            LorePreset.energyPerSecond(INFINITY_ENERGY)
+            MachineLore.energyBuffer(INFINITY_ENERGY * 100),
+            MachineLore.energyPerSecond(INFINITY_ENERGY)
     );
 
     public static void setup(InfinityExpansion plugin) {
-        new InfinityReactor(Categories.INFINITY_CHEAT, INFINITY_REACTOR, InfinityWorkbench.TYPE, new ItemStack[] {
+        new InfinityReactor(Groups.INFINITY_CHEAT, INFINITY_REACTOR, InfinityWorkbench.TYPE, new ItemStack[] {
                 null, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, null,
                 Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.VOID_INGOT, Materials.VOID_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT,
                 Materials.INFINITE_INGOT, Materials.MACHINE_PLATE, Materials.MACHINE_PLATE, Materials.MACHINE_PLATE, Materials.MACHINE_PLATE, Materials.INFINITE_INGOT,
@@ -134,51 +133,51 @@ public final class Generators {
                 Materials.INFINITE_INGOT, Materials.INFINITE_CIRCUIT, Materials.INFINITE_CORE, Materials.INFINITE_CORE, Materials.INFINITE_CIRCUIT, Materials.INFINITE_INGOT
         }, INFINITY_REACTOR_ENERGY).register(plugin);
 
-        new EnergyGenerator(Categories.BASIC_MACHINES, HYDRO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.BASIC_MACHINES, HYDRO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL, Materials.MACHINE_CIRCUIT, Materials.MAGSTEEL,
                 new ItemStack(Material.BUCKET), SlimefunItems.ELECTRO_MAGNET, new ItemStack(Material.BUCKET),
                 Materials.MAGSTEEL, Materials.MACHINE_CIRCUIT, Materials.MAGSTEEL
         }, HYDRO_ENERGY, GenerationType.HYDROELECTRIC).register(plugin);
-        new EnergyGenerator(Categories.ADVANCED_MACHINES, REINFORCED_HYDRO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, REINFORCED_HYDRO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 HYDRO, Materials.MACHINE_CIRCUIT, HYDRO,
                 Materials.MAGSTEEL_PLATE, Materials.MACHINE_CORE, Materials.MAGSTEEL_PLATE,
                 HYDRO, Materials.MACHINE_CIRCUIT, HYDRO
         }, ADVANCED_HYDRO_ENERGY, GenerationType.HYDROELECTRIC).register(plugin);
 
-        new EnergyGenerator(Categories.ADVANCED_MACHINES, GEOTHERMAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, GEOTHERMAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL_PLATE, Materials.MAGSTEEL_PLATE, Materials.MAGSTEEL_PLATE,
                 SlimefunItems.LAVA_GENERATOR_2, SlimefunItems.LAVA_GENERATOR_2, SlimefunItems.LAVA_GENERATOR_2,
                 Materials.MACHINE_CIRCUIT, Materials.MACHINE_CORE, Materials.MACHINE_CIRCUIT
         }, GEO_ENERGY, GenerationType.GEOTHERMAL).register(plugin);
-        new EnergyGenerator(Categories.ADVANCED_MACHINES, REINFORCED_GEOTHERMAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, REINFORCED_GEOTHERMAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 GEOTHERMAL, Materials.MACHINE_CIRCUIT, GEOTHERMAL,
                 Materials.MACHINE_PLATE, Materials.MACHINE_CORE, Materials.MACHINE_PLATE,
                 GEOTHERMAL, Materials.MACHINE_CIRCUIT, GEOTHERMAL
         }, ADVANCED_GEO_ENERGY, GenerationType.GEOTHERMAL).register(plugin);
 
-        new EnergyGenerator(Categories.BASIC_MACHINES, BASIC_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.BASIC_MACHINES, BASIC_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL, Materials.MAGSTEEL_PLATE, Materials.MAGSTEEL,
                 SlimefunItems.SOLAR_PANEL, SlimefunItems.SOLAR_PANEL, SlimefunItems.SOLAR_PANEL,
                 Materials.MACHINE_CIRCUIT, Materials.MACHINE_CIRCUIT, Materials.MACHINE_CIRCUIT
         }, BASIC_SOLAR_ENERGY, GenerationType.SOLAR).register(plugin);
-        new EnergyGenerator(Categories.ADVANCED_MACHINES, ADVANCED_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, ADVANCED_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 BASIC_PANEL, BASIC_PANEL, BASIC_PANEL,
                 Materials.TITANIUM, SlimefunItems.SOLAR_GENERATOR_4, Materials.TITANIUM,
                 Materials.MACHINE_CIRCUIT, Materials.MACHINE_CIRCUIT, Materials.MACHINE_CIRCUIT
         }, ADVANCED_SOLAR_ENERGY, GenerationType.SOLAR).register(plugin);
 
-        new EnergyGenerator(Categories.ADVANCED_MACHINES, CELESTIAL_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, CELESTIAL_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MACHINE_PLATE, Materials.MACHINE_PLATE, Materials.MACHINE_PLATE,
                 ADVANCED_PANEL, ADVANCED_PANEL, ADVANCED_PANEL,
                 Materials.MACHINE_CIRCUIT, Materials.MACHINE_CORE, Materials.MACHINE_CIRCUIT
         }, CELESTIAL_ENERGY, GenerationType.SOLAR).register(plugin);
-        new EnergyGenerator(Categories.ADVANCED_MACHINES, VOID_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, VOID_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.VOID_INGOT, Materials.VOID_INGOT, Materials.VOID_INGOT,
                 CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL,
                 Materials.MAGNONIUM, Materials.MAGNONIUM, Materials.MAGNONIUM
         }, VOID_ENERGY, GenerationType.LUNAR).register(plugin);
 
-        new EnergyGenerator(Categories.INFINITY_CHEAT, INFINITE_PANEL, InfinityWorkbench.TYPE, new ItemStack[] {
+        new EnergyGenerator(Groups.INFINITY_CHEAT, INFINITE_PANEL, InfinityWorkbench.TYPE, new ItemStack[] {
                 CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL,
                 CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL, CELESTIAL_PANEL,
                 Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT,
