@@ -34,9 +34,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.TheBusyBiscuit</groupId>
+            <groupId>io.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-27</version>
+            <version>RC-28</version>
             <scope>provided</scope>
         </dependency>
 
@@ -57,7 +57,7 @@
         <dependency>
             <groupId>io.github.SlimeTraditionalTranslation</groupId>
             <artifactId>InfinityLib</artifactId>
-            <version>dc895a8</version>
+            <version>5a58ea4</version>
             <scope>compile</scope>
         </dependency>
 
