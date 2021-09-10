@@ -46,6 +46,14 @@ https://github.com/Mooy1/InfinityExpansion/releases/tag/v1
 https://bstats.org/plugin/bukkit/InfinityExpansion/8991
 
 ## Changelog
+### Version 123
+- Fix Storage unit drops
+### Version 122
+- Update to RC-28
+- Fix dust extractors
+- Small menu fixes
+### Version 121
+- Update to RC-27
 #### Version 120
 - Won't warn about LiteXpansion nerfs if they are disabled
 #### Version 119
