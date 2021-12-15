@@ -125,8 +125,8 @@ public final class Machines {
     public static final SlimefunItemStack DUST_EXTRACTOR = new SlimefunItemStack(
             "DUST_EXTRACTOR",
             Material.FURNACE,
-            "&8Dust Extractor",
-            "&7Converts cobble into dusts",
+            "&8粉抽取機",
+            "&7將鵝卵石轉化成粉",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(240)
