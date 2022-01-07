@@ -64,7 +64,7 @@ public final class StorageSaveFix {
                         changed = true;
                         if (fixed++ < 25) {
                             String[] cords = CommonPatterns.SEMICOLON.split(location);
-                            logger.log(Level.INFO, "Fixed bugged " + correct + " in "
+                            logger.log(Level.INFO, "修復錯誤的 " + correct + " 在 "
                                     + name + " @ "
                                     + cords[0] + ", "
                                     + cords[1] + ", "
@@ -83,7 +83,7 @@ public final class StorageSaveFix {
 
         time = System.nanoTime() - time;
         if (fixed > 0) {
-            logger.log(Level.INFO, "Fixed " + fixed + " bugged storage(s) in " + (time / 1000000) + " ms");
+            logger.log(Level.INFO, "已修復 " + fixed + " 錯誤的儲存在 " + (time / 1000000) + " ms");
         }
     }
 
