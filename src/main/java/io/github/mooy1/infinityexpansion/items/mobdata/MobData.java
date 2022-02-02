@@ -51,13 +51,13 @@ public final class MobData {
     public static final SlimefunItemStack COW = MobDataCard.create("牛", MobDataTier.PASSIVE);
     public static final SlimefunItemStack SHEEP = MobDataCard.create("綿羊", MobDataTier.PASSIVE);
     public static final SlimefunItemStack CHICKEN = MobDataCard.create("雞", MobDataTier.PASSIVE);
-    public static final SlimefunItemStack VILLAGER = MobDataCard.create("村民", MobDataTier.PASSIVE);
+    public static final SlimefunItemStack VILLAGER = MobDataCard.create("村民", MobDataTier.NEUTRAL);
 
     public static final SlimefunItemStack BEE = MobDataCard.create("蜜蜂", MobDataTier.NEUTRAL);
     public static final SlimefunItemStack SLIME = MobDataCard.create("史萊姆", MobDataTier.NEUTRAL);
     public static final SlimefunItemStack MAGMA_CUBE = MobDataCard.create("岩漿立方怪", MobDataTier.NEUTRAL);
 
-    public static final SlimefunItemStack WITCH = MobDataCard.create("女巫", MobDataTier.HOSTILE);
+    public static final SlimefunItemStack WITCH = MobDataCard.create("女巫", MobDataTier.ADVANCED);
     public static final SlimefunItemStack ZOMBIE = MobDataCard.create("殭屍", MobDataTier.HOSTILE);
     public static final SlimefunItemStack SPIDER = MobDataCard.create("蜘蛛", MobDataTier.HOSTILE);
     public static final SlimefunItemStack SKELETON = MobDataCard.create("骷髏", MobDataTier.HOSTILE);
@@ -65,11 +65,11 @@ public final class MobData {
 
     public static final SlimefunItemStack WITHER_SKELETON = MobDataCard.create("凋零骷髏", MobDataTier.ADVANCED);
     public static final SlimefunItemStack ENDERMEN = MobDataCard.create("終界使者", MobDataTier.ADVANCED);
-    public static final SlimefunItemStack GUARDIAN = MobDataCard.create("深海守衛", MobDataTier.ADVANCED);
+    public static final SlimefunItemStack GUARDIAN = MobDataCard.create("深海守衛", MobDataTier.HOSTILE);
     public static final SlimefunItemStack IRON_GOLEM = MobDataCard.create("鐵魔像", MobDataTier.ADVANCED);
     public static final SlimefunItemStack BLAZE = MobDataCard.create("烈焰使者", MobDataTier.ADVANCED);
 
-    public static final SlimefunItemStack WITHER = MobDataCard.create("凋零怪", MobDataTier.BOSS);
+    public static final SlimefunItemStack WITHER = MobDataCard.create("凋零怪", MobDataTier.MINI_BOSS);
     public static final SlimefunItemStack ENDER_DRAGON = MobDataCard.create("終界龍", MobDataTier.BOSS);
 
     public static void setup(InfinityExpansion plugin) {
@@ -183,7 +183,7 @@ public final class MobData {
                 new ItemStack(Material.HONEY_BLOCK, 16), EMPTY_DATA_CARD, new ItemStack(Material.HONEY_BLOCK, 16),
                 new ItemStack(Material.HONEYCOMB_BLOCK, 16), new ItemStack(Material.HONEY_BLOCK, 16), new ItemStack(Material.HONEYCOMB_BLOCK, 16)
         }).addDrop(Material.HONEYCOMB, 1).register(plugin);
-        new MobDataCard(VILLAGER, MobDataTier.ADVANCED, new ItemStack[] {
+        new MobDataCard(VILLAGER, MobDataTier.NEUTRAL, new ItemStack[] {
                 new ItemStack(Material.EMERALD, 64), new ItemStack(Material.POTATO, 64), new ItemStack(Material.EMERALD, 64),
                 new ItemStack(Material.CARROT, 64), EMPTY_DATA_CARD, new ItemStack(Material.WHEAT, 64),
                 new ItemStack(Material.EMERALD, 64), new ItemStack(Material.PUMPKIN, 64), new ItemStack(Material.EMERALD, 64)
