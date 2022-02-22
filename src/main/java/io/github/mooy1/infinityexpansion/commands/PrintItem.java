@@ -15,7 +15,7 @@ import io.github.mooy1.infinitylib.commands.SubCommand;
 public final class PrintItem extends SubCommand {
 
     public PrintItem() {
-        super("printitem", "顯示該物品的內部資料來進行除錯目的", true);
+        super("printitem", "顯示該物品的內部資料來進行除錯目的", "infinityexpansion.printitem");
     }
 
     @Override
